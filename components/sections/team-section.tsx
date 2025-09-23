@@ -25,24 +25,15 @@ const teamMembers: TeamMember[] = [
       linkedin: "https://www.linkedin.com/in/hamzaejaz-",
     },
   },
+
   {
     id: 2,
-    name: "Abu Bakkar",
-    role: "Chief Technology Officer",
-    bio: "Leading the charge in technological innovation to shape a smarter, more connected future.",
-    image: "/images/cto.png",
-    social: {
-      linkedin: "https://www.linkedin.com/in/abu-bakkar-7a6a2621b/",
-    },
-  },
-  {
-    id: 3,
-    name: "Wasif Mehmod",
+    name: "Bilal Hassan ",
     role: "Chief Operating Officer",
     bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "/images/coo.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D35AQE5W741EuYqPA/profile-framedphoto-shrink_400_400/B4DZZSifTNGwAc-/0/1745141495313?e=1759237200&v=beta&t=7s1Utf91Y6wemr79tuHZb6MdKy5J3uKgIjH9v9_HZHQ",
     social: {
-      linkedin: "https://www.linkedin.com/in/wasifmehmod/",
+      linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
     },
   },
 ]
