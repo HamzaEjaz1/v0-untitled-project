@@ -1,4 +1,4 @@
-import { Code, Database, Lightbulb, MessageSquare, Sparkles, BrainCircuit } from "lucide-react"
+import { Code, Smartphone, Bot, MessageSquare, Palette } from "lucide-react"
 import { Reveal } from "@/components/ui/reveal"
 import AnimatedText from "@/components/ui/animated-text"
 import { Button } from "@/components/ui/button"
@@ -14,17 +14,17 @@ export default function ServicesPage() {
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <p className="text-pink-600 dark:text-pink-400 font-medium tracking-wider">OUR SERVICES</p>
+              <p className="text-green-600 dark:text-green-400 font-medium tracking-wider">OUR SERVICES</p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
-                <AnimatedText text="Innovative Solutions for the Future" />
+                <AnimatedText text="Comprehensive Digital Solutions" />
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                At HamHib Coders, we are dedicated to delivering cutting-edge solutions that drive the future of
-                technology and development. Our expertise positions us at the forefront of innovation.
+                At Wrapify Solutions, we offer comprehensive digital solutions to help businesses thrive in the modern
+                digital landscape. Our expertise spans across multiple domains to deliver exceptional results.
               </p>
             </Reveal>
           </div>
@@ -37,9 +37,9 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Reveal>
               <DetailedServiceCard
-                icon={<Code className="h-10 w-10 text-pink-600" />}
+                icon={<Code className="h-10 w-10 text-green-600" />}
                 title="Web Development"
-                description="Custom web applications designed to meet your unique business needs with modern technologies."
+                description="Scalable, high-performance websites tailored to your brand and business needs."
                 features={[
                   "Responsive web design",
                   "Progressive web applications",
@@ -51,71 +51,57 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <DetailedServiceCard
-                icon={<Database className="h-10 w-10 text-pink-600" />}
-                title="Data Science"
-                description="Transforming data into actionable insights for strategic decision-making and business growth."
+                icon={<Smartphone className="h-10 w-10 text-green-600" />}
+                title="App Development"
+                description="Intuitive mobile and desktop applications designed for impact and usability."
                 features={[
-                  "Data analysis and visualization",
-                  "Predictive analytics",
-                  "Business intelligence solutions",
-                  "Data mining and processing",
-                  "Custom dashboards and reporting",
+                  "Native iOS and Android apps",
+                  "Cross-platform development",
+                  "Desktop applications",
+                  "App store optimization",
+                  "Maintenance and updates",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.2}>
               <DetailedServiceCard
-                icon={<Lightbulb className="h-10 w-10 text-pink-600" />}
-                title="Machine Learning"
-                description="Building systems that adapt and learn from data to enhance efficiency and automation."
+                icon={<Bot className="h-10 w-10 text-green-600" />}
+                title="AI Agents"
+                description="Smart, autonomous systems to streamline processes and decision-making."
                 features={[
-                  "Supervised and unsupervised learning",
-                  "Natural language processing",
-                  "Computer vision solutions",
-                  "Recommendation systems",
-                  "Anomaly detection",
+                  "Process automation",
+                  "Intelligent decision systems",
+                  "Data analysis and insights",
+                  "Predictive analytics",
+                  "Custom AI solutions",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.3}>
               <DetailedServiceCard
-                icon={<BrainCircuit className="h-10 w-10 text-pink-600" />}
-                title="Deep Learning"
-                description="Developing sophisticated models for complex problem-solving and pattern recognition."
+                icon={<MessageSquare className="h-10 w-10 text-green-600" />}
+                title="Chatbot Development"
+                description="Intelligent chatbots to enhance customer engagement and automate support."
                 features={[
-                  "Neural network design",
-                  "Image and speech recognition",
-                  "Sentiment analysis",
-                  "Time series forecasting",
-                  "Transfer learning applications",
+                  "Customer service automation",
+                  "AI-powered virtual assistants",
+                  "Multi-platform integration",
+                  "Natural language processing",
+                  "24/7 customer support",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.4}>
               <DetailedServiceCard
-                icon={<Sparkles className="h-10 w-10 text-pink-600" />}
-                title="Generative AI"
-                description="Creating innovative content and solutions with AI-driven creativity and intelligence."
+                icon={<Palette className="h-10 w-10 text-green-600" />}
+                title="UI/UX Designing"
+                description="Human-centered designs that blend functionality with stunning visuals."
                 features={[
-                  "Text and content generation",
-                  "Image and art creation",
-                  "Music and audio synthesis",
-                  "Creative assistance tools",
-                  "Personalized content solutions",
-                ]}
-              />
-            </Reveal>
-            <Reveal delay={0.5}>
-              <DetailedServiceCard
-                icon={<MessageSquare className="h-10 w-10 text-pink-600" />}
-                title="Chatbots & LLMs"
-                description="Implementing intelligent chatbots to improve customer interactions and automate responses."
-                features={[
-                  "Customer service automation",
-                  "AI-powered virtual assistants",
-                  "Multi-platform chatbot integration",
-                  "Custom LLM fine-tuning",
-                  "Conversational AI solutions",
+                  "User experience research",
+                  "Interface design",
+                  "Prototyping and wireframing",
+                  "Design systems",
+                  "Usability testing",
                 ]}
               />
             </Reveal>
@@ -128,7 +114,7 @@ export default function ServicesPage() {
         <div className="container px-4 mx-auto">
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Approach</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
               <p className="text-gray-600 dark:text-gray-300">
                 We follow a structured process to ensure successful project delivery and client satisfaction.
               </p>
@@ -138,7 +124,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Reveal delay={0.1}>
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center relative">
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold text-xl">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
                   1
                 </div>
                 <h3 className="text-xl font-bold mb-4 mt-4">Discovery</h3>
@@ -149,18 +135,18 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center relative">
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold text-xl">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
                   2
                 </div>
-                <h3 className="text-xl font-bold mb-4 mt-4">Planning</h3>
+                <h3 className="text-xl font-bold mb-4 mt-4">Design & Planning</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We develop a detailed project plan with timelines, milestones, and deliverables.
+                  We create detailed designs and project plans with timelines and milestones.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center relative">
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold text-xl">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
                   3
                 </div>
                 <h3 className="text-xl font-bold mb-4 mt-4">Development</h3>
@@ -171,12 +157,12 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.4}>
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center relative">
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold text-xl">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
                   4
                 </div>
-                <h3 className="text-xl font-bold mb-4 mt-4">Delivery & Support</h3>
+                <h3 className="text-xl font-bold mb-4 mt-4">Launch & Support</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We deliver the final solution and provide ongoing support and maintenance.
+                  We launch your solution and provide ongoing support and maintenance.
                 </p>
               </div>
             </Reveal>
@@ -186,7 +172,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-teal-500/10"></div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
@@ -198,8 +184,8 @@ export default function ServicesPage() {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <Button size="lg" className="bg-pink-600 hover:bg-pink-700 text-white" asChild>
-                <Link href="/contact">Contact Us</Link>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
+                <Link href="/contact">Let's Build Together</Link>
               </Button>
             </Reveal>
           </div>

@@ -8,10 +8,10 @@ import Footer from "@/components/layout/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "HamHib Coders | Web Development & AI Solutions",
+  title: "Wrapify Solutions | Web Development & AI Solutions",
   description:
-    "HamHib Coders is a forward-thinking technology company committed to excellence. We transform data and web into solutions.",
-    generator: 'v0.dev'
+    "Wrapify Solutions is a forward-thinking technology company driven by innovation, design, and excellence. We wrap ideas into intelligent digital solutions.",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

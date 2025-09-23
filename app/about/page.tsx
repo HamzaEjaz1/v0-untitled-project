@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <p className="text-pink-600 dark:text-pink-400 font-medium tracking-wider">ABOUT US</p>
+              <p className="text-green-600 dark:text-green-400 font-medium tracking-wider">ABOUT US</p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
@@ -22,9 +22,9 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                We are a dynamic team of innovative developers, united by our passion for transforming ideas into
-                real-world solutions. At our core, we are driven by a shared commitment to excellence and a deep belief
-                in the power of technology to make a positive impact on the world.
+                Wrapify Solutions is a forward-thinking technology company driven by innovation, design, and excellence.
+                Our passionate team combines expertise in software engineering, AI, and design to craft solutions that
+                don't just solve problems but create lasting impact.
               </p>
             </Reveal>
           </div>
@@ -39,8 +39,8 @@ export default function AboutPage() {
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Our Mission</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  To bridge complex problems with cutting-edge solutions across web development, data science, machine
-                  learning, and more. We strive to empower businesses with technology that drives growth and innovation.
+                  To wrap ideas into intelligent digital solutions that empower businesses to grow in the digital era.
+                  We specialize in turning complex challenges into seamless, user-friendly, and scalable solutions.
                 </p>
               </div>
             </Reveal>
@@ -48,9 +48,9 @@ export default function AboutPage() {
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Our Vision</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  To be at the forefront of technological innovation, creating solutions that not only meet current
-                  needs but anticipate future challenges. We envision a world where technology enhances human potential
-                  and creates sustainable value.
+                  To be the leading provider of intelligent digital solutions that transform how businesses operate and
+                  engage with their customers. We envision a future where technology seamlessly integrates with human
+                  creativity.
                 </p>
               </div>
             </Reveal>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto">
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Wrapify Solutions?</h2>
               <p className="text-gray-600 dark:text-gray-300">These principles guide our work and define our culture</p>
             </div>
           </Reveal>
@@ -71,64 +71,66 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Reveal delay={0.1}>
               <ValueCard
-                icon={<Briefcase className="h-8 w-8 text-pink-600" />}
-                title="Excellence"
-                description="We strive for excellence in everything we do, from code quality to client communication."
+                icon={<Users className="h-8 w-8 text-green-600" />}
+                title="Expert Team"
+                description="Skilled professionals across multiple technology domains."
               />
             </Reveal>
             <Reveal delay={0.2}>
               <ValueCard
-                icon={<Users className="h-8 w-8 text-pink-600" />}
-                title="Collaboration"
-                description="We believe in the power of teamwork and collaborative problem-solving."
+                icon={<Target className="h-8 w-8 text-green-600" />}
+                title="Tailored Solutions"
+                description="Custom-built strategies to fit your unique vision."
               />
             </Reveal>
             <Reveal delay={0.3}>
               <ValueCard
-                icon={<Award className="h-8 w-8 text-pink-600" />}
-                title="Innovation"
-                description="We embrace new ideas and technologies to create cutting-edge solutions."
+                icon={<Award className="h-8 w-8 text-green-600" />}
+                title="Innovation First"
+                description="Leveraging the latest technologies for future-ready products."
               />
             </Reveal>
             <Reveal delay={0.4}>
               <ValueCard
-                icon={<Target className="h-8 w-8 text-pink-600" />}
-                title="Client Focus"
-                description="We prioritize our clients' goals and exceed their expectations."
+                icon={<Briefcase className="h-8 w-8 text-green-600" />}
+                title="Client-Centric"
+                description="Your goals drive everything we create."
               />
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Our Approach */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1">
               <Reveal>
                 <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 z-10"></div>
-                  <img src="/images/about-image.png" alt="Our Story" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20 z-10"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Our Approach"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Reveal>
             </div>
             <div className="flex-1 space-y-6">
               <Reveal direction="right">
-                <h2 className="text-3xl md:text-4xl font-bold">Our Story</h2>
+                <h2 className="text-3xl md:text-4xl font-bold">Our Approach</h2>
               </Reveal>
               <Reveal direction="right" delay={0.1}>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Founded in 2024, HamHib Coders began with a simple vision: to create technology solutions that make a
-                  difference. What started as a small team of passionate developers has grown into a forward-thinking
-                  technology company committed to excellence.
+                  We believe in collaboration, customization, and creativity. By working closely with clients, we ensure
+                  every solution is aligned with their unique goals.
                 </p>
               </Reveal>
               <Reveal direction="right" delay={0.2}>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Based in Islamabad, Pakistan, we've quickly established ourselves as a reliable partner for businesses
-                  seeking innovative technology solutions. Our journey is defined by continuous learning, adaptation,
-                  and a relentless pursuit of excellence.
+                  Our blend of cutting-edge technology and design thinking delivers results that inspire growth and
+                  innovation. We don't just deliver projects—we create digital experiences.
                 </p>
               </Reveal>
             </div>

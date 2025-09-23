@@ -9,7 +9,7 @@ const testimonials = [
   {
     id: 1,
     content:
-      "HamHib Coders delivered an exceptional web application that exceeded our expectations. Their team was professional, responsive, and truly understood our business needs.",
+      "Wrapify Solutions delivered an exceptional web application that exceeded our expectations. Their team was professional, responsive, and truly understood our business needs.",
     author: "Sarah Johnson",
     position: "CEO, TechStart Inc.",
     avatar:
@@ -18,7 +18,7 @@ const testimonials = [
   {
     id: 2,
     content:
-      "Working with HamHib Coders on our machine learning project was a game-changer for our business. Their expertise and innovative approach helped us achieve results we didn't think were possible.",
+      "Working with Wrapify Solutions on our AI agent project was a game-changer for our business. Their expertise and innovative approach helped us achieve results we didn't think were possible.",
     author: "Michael Chen",
     position: "CTO, DataDrive Solutions",
     avatar:
@@ -27,9 +27,9 @@ const testimonials = [
   {
     id: 3,
     content:
-      "The chatbot solution developed by HamHib Coders has significantly improved our customer service efficiency. Their team was knowledgeable, creative, and a pleasure to work with.",
+      "The UI/UX design created by Wrapify Solutions has significantly improved our user engagement. Their team was creative, professional, and delivered stunning results.",
     author: "Emily Rodriguez",
-    position: "Head of Customer Experience, GlobalServe",
+    position: "Head of Product, GlobalServe",
     avatar:
       "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
   },
@@ -71,7 +71,7 @@ export default function TestimonialSlider() {
   return (
     <div className="relative max-w-4xl mx-auto">
       <div className="overflow-hidden relative rounded-2xl bg-white dark:bg-gray-800 shadow-xl p-8 md:p-12">
-        <div className="absolute top-6 left-6 text-pink-600 dark:text-pink-400">
+        <div className="absolute top-6 left-6 text-green-600 dark:text-green-400">
           <Quote className="h-12 w-12 opacity-20" />
         </div>
 
@@ -111,8 +111,8 @@ export default function TestimonialSlider() {
             className={cn(
               "w-3 h-3 rounded-full transition-all duration-300",
               index === currentIndex
-                ? "bg-pink-600 w-8"
-                : "bg-gray-300 dark:bg-gray-600 hover:bg-pink-400 dark:hover:bg-pink-800",
+                ? "bg-green-600 w-8"
+                : "bg-gray-300 dark:bg-gray-600 hover:bg-green-400 dark:hover:bg-green-800",
             )}
             aria-label={`Go to testimonial ${index + 1}`}
           />

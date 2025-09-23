@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Code, Database, Lightbulb, MessageSquare, Sparkles } from "lucide-react"
+import { ArrowRight, Code, Smartphone, Bot, MessageSquare, Palette } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import StatsCounter from "@/components/sections/stats-counter"
 import TestimonialSlider from "@/components/sections/testimonial-slider"
@@ -17,23 +17,26 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 space-y-6">
               <Reveal>
-                <p className="text-pink-600 dark:text-pink-400 font-medium tracking-wider">WELCOME TO HAMHIB CODERS</p>
+                <p className="text-green-600 dark:text-green-400 font-medium tracking-wider">
+                  WELCOME TO WRAPIFY SOLUTIONS
+                </p>
               </Reveal>
               <Reveal delay={0.1}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  We Transform <br />
-                  <AnimatedText text="Data and Web into Solutions" />
+                  We Wrap Ideas into <br />
+                  <AnimatedText text="Intelligent Digital Solutions" />
                 </h1>
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl">
-                  Revolutionize your digital future with HamHib Coders! Our team of experts is passionate about
-                  leveraging the latest technologies to drive business success.
+                  Welcome to Wrapify Solutions, where creativity meets technology to deliver transformative digital
+                  experiences. We specialize in turning complex challenges into seamless, user-friendly, and scalable
+                  solutions.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button size="lg" className="bg-pink-600 hover:bg-pink-700 text-white" asChild>
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
                     <Link href="/services">
                       Explore Services
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -48,10 +51,10 @@ export default function Home() {
             <div className="flex-1 relative">
               <Reveal direction="right">
                 <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20 z-10"></div>
                   <img
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                    alt="Digital Transformation"
+                    alt="Digital Solutions"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -77,7 +80,7 @@ export default function Home() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                We offer cutting-edge solutions across various domains to help businesses thrive in the digital era.
+                We offer comprehensive digital solutions to help businesses thrive in the modern digital landscape.
               </p>
             </div>
           </Reveal>
@@ -85,44 +88,37 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Reveal delay={0.1}>
               <ServiceCard
-                icon={<Code className="h-8 w-8 text-pink-600" />}
+                icon={<Code className="h-8 w-8 text-green-600" />}
                 title="Web Development"
-                description="Custom web applications designed to meet your unique business needs with modern technologies."
+                description="Scalable, high-performance websites tailored to your brand and business needs."
               />
             </Reveal>
             <Reveal delay={0.2}>
               <ServiceCard
-                icon={<Database className="h-8 w-8 text-pink-600" />}
-                title="Data Science"
-                description="Transforming data into actionable insights for strategic decision-making and business growth."
+                icon={<Smartphone className="h-8 w-8 text-green-600" />}
+                title="App Development"
+                description="Intuitive mobile and desktop applications designed for impact and usability."
               />
             </Reveal>
             <Reveal delay={0.3}>
               <ServiceCard
-                icon={<Lightbulb className="h-8 w-8 text-pink-600" />}
-                title="Machine Learning"
-                description="Building systems that adapt and learn from data to enhance efficiency and automation."
+                icon={<Bot className="h-8 w-8 text-green-600" />}
+                title="AI Agents"
+                description="Smart, autonomous systems to streamline processes and decision-making."
               />
             </Reveal>
             <Reveal delay={0.4}>
               <ServiceCard
-                icon={<Sparkles className="h-8 w-8 text-pink-600" />}
-                title="Generative AI"
-                description="Creating innovative content and solutions with AI-driven creativity and intelligence."
+                icon={<MessageSquare className="h-8 w-8 text-green-600" />}
+                title="Chatbot Development"
+                description="Intelligent chatbots to enhance customer engagement and automate support."
               />
             </Reveal>
             <Reveal delay={0.5}>
               <ServiceCard
-                icon={<MessageSquare className="h-8 w-8 text-pink-600" />}
-                title="Chatbots"
-                description="Implementing intelligent chatbots to improve customer interactions and automate responses."
-              />
-            </Reveal>
-            <Reveal delay={0.6}>
-              <ServiceCard
-                icon={<Sparkles className="h-8 w-8 text-pink-600" />}
-                title="Deep Learning"
-                description="Developing sophisticated models for complex problem-solving and pattern recognition."
+                icon={<Palette className="h-8 w-8 text-green-600" />}
+                title="UI/UX Designing"
+                description="Human-centered designs that blend functionality with stunning visuals."
               />
             </Reveal>
           </div>
@@ -148,22 +144,22 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-teal-500/10"></div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Wrap Your Ideas into Reality?</h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                Partner with HamHib Coders to leverage cutting-edge technology solutions that drive growth and
-                innovation.
+                Partner with Wrapify Solutions to create digital experiences that wrap innovation, design, and
+                intelligence into one solution.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <Button size="lg" className="bg-pink-600 hover:bg-pink-700 text-white" asChild>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
                 <Link href="/contact">
-                  Get in Touch
+                  Let's Build Together
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

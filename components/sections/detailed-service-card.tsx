@@ -25,7 +25,7 @@ export default function DetailedServiceCard({
       )}
     >
       <div className="flex items-start gap-6">
-        <div className="bg-pink-100 dark:bg-pink-900/30 p-4 rounded-xl group-hover:bg-pink-200 dark:group-hover:bg-pink-800/40 transition-colors duration-300">
+        <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-xl group-hover:bg-green-200 dark:group-hover:bg-green-800/40 transition-colors duration-300">
           {icon}
         </div>
         <div>
@@ -35,7 +35,7 @@ export default function DetailedServiceCard({
           <ul className="space-y-2">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start gap-2">
-                <Check className="h-5 w-5 text-pink-600 mt-0.5" />
+                <Check className="h-5 w-5 text-green-600 mt-0.5" />
                 <span className="text-gray-600 dark:text-gray-300">{feature}</span>
               </li>
             ))}

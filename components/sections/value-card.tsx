@@ -16,7 +16,7 @@ export default function ValueCard({ icon, title, description, className }: Value
         className,
       )}
     >
-      <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full inline-flex items-center justify-center mb-4 group-hover:bg-pink-200 dark:group-hover:bg-pink-800/40 transition-colors duration-300">
+      <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-full inline-flex items-center justify-center mb-4 group-hover:bg-green-200 dark:group-hover:bg-green-800/40 transition-colors duration-300">
         {icon}
       </div>
       <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{title}</h3>

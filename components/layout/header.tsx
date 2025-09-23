@@ -49,8 +49,8 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-pink-600 dark:text-pink-400">
-              HamHib<span className="text-gray-900 dark:text-white">Coders</span>
+            <span className="text-2xl font-bold text-green-600 dark:text-green-400">
+              Wrapify<span className="text-gray-900 dark:text-white">Solutions</span>
             </span>
           </Link>
 
@@ -61,8 +61,8 @@ export default function Header() {
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-pink-600 dark:hover:text-pink-400",
-                  pathname === item.path ? "text-pink-600 dark:text-pink-400" : "text-gray-700 dark:text-gray-200",
+                  "text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400",
+                  pathname === item.path ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-200",
                 )}
               >
                 {item.name}
@@ -72,7 +72,7 @@ export default function Header() {
 
           <div className="flex items-center space-x-4">
             <ModeToggle />
-            <Button className="hidden md:flex bg-pink-600 hover:bg-pink-700 text-white" asChild>
+            <Button className="hidden md:flex bg-green-600 hover:bg-green-700 text-white" asChild>
               <Link href="/contact">Get in Touch</Link>
             </Button>
 
@@ -97,8 +97,8 @@ export default function Header() {
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-pink-600 dark:hover:text-pink-400 py-2",
-                  pathname === item.path ? "text-pink-600 dark:text-pink-400" : "text-gray-700 dark:text-gray-200",
+                  "text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400 py-2",
+                  pathname === item.path ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-200",
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -106,7 +106,7 @@ export default function Header() {
               </Link>
             ))}
             <Button
-              className="bg-pink-600 hover:bg-pink-700 text-white w-full"
+              className="bg-green-600 hover:bg-green-700 text-white w-full"
               asChild
               onClick={() => setIsMenuOpen(false)}
             >

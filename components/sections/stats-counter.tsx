@@ -38,7 +38,7 @@ const StatItem = ({ icon, value, label, duration = 2000, className }: StatProps)
 
   return (
     <div className={cn("flex flex-col items-center text-center", className)}>
-      <div className="bg-pink-100 dark:bg-pink-900/30 p-4 rounded-full mb-4">{icon}</div>
+      <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-full mb-4">{icon}</div>
       <h3 className="text-4xl font-bold mb-2">{count}+</h3>
       <p className="text-gray-600 dark:text-gray-300">{label}</p>
     </div>
@@ -48,10 +48,10 @@ const StatItem = ({ icon, value, label, duration = 2000, className }: StatProps)
 export default function StatsCounter() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-      <StatItem icon={<Briefcase className="h-8 w-8 text-pink-600" />} value={50} label="Projects Completed" />
-      <StatItem icon={<Users className="h-8 w-8 text-pink-600" />} value={25} label="Happy Clients" />
-      <StatItem icon={<Code className="h-8 w-8 text-pink-600" />} value={10000} label="Lines of Code" />
-      <StatItem icon={<Award className="h-8 w-8 text-pink-600" />} value={15} label="Awards Won" />
+      <StatItem icon={<Briefcase className="h-8 w-8 text-green-600" />} value={50} label="Projects Completed" />
+      <StatItem icon={<Users className="h-8 w-8 text-green-600" />} value={25} label="Happy Clients" />
+      <StatItem icon={<Code className="h-8 w-8 text-green-600" />} value={10000} label="Lines of Code" />
+      <StatItem icon={<Award className="h-8 w-8 text-green-600" />} value={15} label="Awards Won" />
     </div>
   )
 }
