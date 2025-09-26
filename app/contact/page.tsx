@@ -12,7 +12,7 @@ export default function ContactPage() {
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <p className="text-pink-600 dark:text-pink-400 font-medium tracking-wider">GET IN TOUCH</p>
+              <p className="text-green-600 dark:text-green-400 font-medium tracking-wider">GET IN TOUCH</p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
