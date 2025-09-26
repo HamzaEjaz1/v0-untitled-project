@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <Reveal direction="right" delay={0.1}>
                   <div className="flex items-start gap-4">
                     <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full">
-                      <MapPin className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+                      <MapPin className="h-6 w-6 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Our Location</h3>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 <Reveal direction="right" delay={0.2}>
                   <div className="flex items-start gap-4">
                     <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full">
-                      <Phone className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+                      <Phone className="h-6 w-6  text-green-600 dark:text-green-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Phone Number</h3>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <Reveal direction="right" delay={0.3}>
                   <div className="flex items-start gap-4">
                     <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full">
-                      <Mail className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+                      <Mail className="h-6 w-6  text-green-600 dark:text-green-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Email Address</h3>
