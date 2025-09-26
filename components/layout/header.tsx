@@ -48,13 +48,10 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D0BAQFIDPmuzSMGqQ/company-logo_200_200/B4DZmChSH9IcAI-/0/1758831388221/wrapifysolutions_logo?e=1761782400&v=beta&t=U5y2vRUVWE0X71BdHSThbTdW3Ir2Oj9XGrCP1SUxqPU"  // ✅ Replace with your actual logo path (e.g., from /public folder)
-              alt="Wrapify Solutions Logo"
-              className="h-10 w-auto" // Adjust size as needed
-            />
+            <span className="text-2xl font-bold text-green-600 dark:text-green-400">
+              Wrapify<span className="text-gray-900 dark:text-white">Solutions</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
