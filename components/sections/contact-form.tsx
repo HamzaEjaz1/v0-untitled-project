@@ -96,7 +96,7 @@ export default function ContactForm() {
           />
         </div>
 
-        <Button type="submit" className="w-full bg-pink-600 hover:bg-pink-700 text-white" disabled={isSubmitting}>
+        <Button type="submit" className="w-full  bg:text-green-400 text-white" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
