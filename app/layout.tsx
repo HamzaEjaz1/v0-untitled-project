@@ -11,7 +11,7 @@ export const metadata = {
   title: "Wrapify Solutions | Web Development & AI Solutions",
   description:
     "Wrapify Solutions is a forward-thinking technology company driven by innovation, design, and excellence. We wrap ideas into intelligent digital solutions.",
-    generator: 'v0.app'
+    generator"
 }
 
 export default function RootLayout({
