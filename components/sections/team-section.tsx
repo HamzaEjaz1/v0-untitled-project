@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
     name: "Hamza Ejaz",
     role: "Chief Executive Officer",
     bio: "As CEO, I prioritize results over words. Partner with us for real outcomes.",
-    image: "/images/ceo.png",
+    image: "https://avatars.githubusercontent.com/u/112030412?s=400&u=3c149f011fb68b7fd6658b148e6b66108032345e&v=4",
     social: {
       linkedin: "https://www.linkedin.com/in/hamzaejaz-",
     },
@@ -31,9 +31,20 @@ const teamMembers: TeamMember[] = [
     name: "Bilal Hassan ",
     role: "Chief Operating Officer",
     bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D4D35AQE5W741EuYqPA/profile-framedphoto-shrink_400_400/B4DZZSifTNGwAc-/0/1745141495313?e=1759237200&v=beta&t=7s1Utf91Y6wemr79tuHZb6MdKy5J3uKgIjH9v9_HZHQ",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
     social: {
       linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
+    },
+  },
+
+    {
+    id: 3,
+    name: "Muhammad Atif Khan ",
+    role: "Web Dev Team Lead",
+    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1761782400&v=beta&t=SVivtcm7UebEw_hipw1EAf_5Q77RqYAMCnyw5qo9xBo",
+    social: {
+      linkedin: "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
     },
   },
 ]
