@@ -121,7 +121,7 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{member.name}</h3>
-                  <p className="text-pink-600 dark:text-pink-400 font-medium mb-3">{member.role}</p>
+                  <p className="text-green-600 dark:text-green-400 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">{member.bio}</p>
                 </div>
               </div>
