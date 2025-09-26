@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQFIDPmuzSMGqQ/company-logo_200_200/B4DZmChSH9IcAI-/0/1758831388221/wrapifysolutions_logo?e=1761782400&v=beta&t=U5y2vRUVWE0X71BdHSThbTdW3Ir2Oj9XGrCP1SUxqPU" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
