@@ -46,19 +46,17 @@ const teamMembers: TeamMember[] = [
     social: {
       linkedin: "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
     },
-  },
-
 
   
 
   {
     id: 4,
-    name: "Bilal Hassan ",
-    role: "Chief Operating Officer",
+    name: "Wasif Mehmood ",
+    role: "AI Team Lead",
     bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG7fBB3PiCAtA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720631855575?e=1761782400&v=beta&t=A-xU6_vzDjgdbPooXK3Kv3E7OCZDYAe4KM8_3hWX-mI",
     social: {
-      linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
+      linkedin: "https://www.linkedin.com/in/wasifmehmod/",
     },
   },
 
@@ -66,12 +64,12 @@ const teamMembers: TeamMember[] = [
 
   {
     id: 5,
-    name: "Bilal Hassan ",
-    role: "Chief Operating Officer",
+    name: "Misbah Razzaq,
+    role: "Ui/Ux Design Lead",
     bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
+    image: "https://media.licdn.com/dms/image/v2/D5635AQGUtzVakt7D1A/profile-framedphoto-shrink_400_400/B56ZgRMPFmGUAc-/0/1752635077354?e=1759590000&v=beta&t=VzIgf7zcaVtfPzqLp4Y0nqnhgERhBAB0HtxeeSVVcMs",
     social: {
-      linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
+      linkedin: "https://www.linkedin.com/in/misbah-razzaq-2253002ab/",
     },
   }
 ]
