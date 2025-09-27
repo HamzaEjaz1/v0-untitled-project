@@ -20,58 +20,56 @@ const teamMembers: TeamMember[] = [
     name: "Hamza Ejaz",
     role: "Chief Executive Officer",
     bio: "As CEO, I prioritize results over words. Partner with us for real outcomes.",
-    image: "https://avatars.githubusercontent.com/u/112030412?s=400&u=3c149f011fb68b7fd6658b148e6b66108032345e&v=4",
+    image:
+      "https://avatars.githubusercontent.com/u/112030412?s=400&u=3c149f011fb68b7fd6658b148e6b66108032345e&v=4",
     social: {
       linkedin: "https://www.linkedin.com/in/hamzaejaz-",
     },
   },
-
   {
     id: 2,
-    name: "Bilal Hassan ",
+    name: "Bilal Hassan",
     role: "Chief Operating Officer",
-    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
+    bio: "Driving operational excellence and strategic growth to elevate our company's success.",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
     social: {
       linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
     },
   },
-
-    {
+  {
     id: 3,
-    name: "Muhammad Atif Khan ",
-    role: "Web Dev Team Lead",
-    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1761782400&v=beta&t=SVivtcm7UebEw_hipw1EAf_5Q77RqYAMCnyw5qo9xBo",
+    name: "Muhammad Atif Khan",
+    role: "Web Development Team Lead",
+    bio: "Leading the web development team to deliver robust, scalable, and user-friendly web applications that drive business success.",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1761782400&v=beta&t=SVivtcm7UebEw_hipw1EAf_5Q77RqYAMCnyw5qo9xBo",
     social: {
       linkedin: "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
     },
-
-  
-
+  },
   {
     id: 4,
-    name: "Wasif Mehmood ",
+    name: "Wasif Mehmood",
     role: "AI Team Lead",
-    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQG7fBB3PiCAtA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720631855575?e=1761782400&v=beta&t=A-xU6_vzDjgdbPooXK3Kv3E7OCZDYAe4KM8_3hWX-mI",
+    bio: "Guiding the AI team to develop cutting-edge machine learning and deep learning solutions that power intelligent, data-driven products.",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D03AQG7fBB3PiCAtA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720631855575?e=1761782400&v=beta&t=A-xU6_vzDjgdbPooXK3Kv3E7OCZDYAe4KM8_3hWX-mI",
     social: {
       linkedin: "https://www.linkedin.com/in/wasifmehmod/",
     },
   },
-
-
-
   {
     id: 5,
-    name: "Misbah Razzaq,
-    role: "Ui/Ux Design Lead",
-    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "https://media.licdn.com/dms/image/v2/D5635AQGUtzVakt7D1A/profile-framedphoto-shrink_400_400/B56ZgRMPFmGUAc-/0/1752635077354?e=1759590000&v=beta&t=VzIgf7zcaVtfPzqLp4Y0nqnhgERhBAB0HtxeeSVVcMs",
+    name: "Misbah Razzaq",
+    role: "UI/UX Design Lead",
+    bio: "Leading the UI/UX team to create intuitive, visually stunning, and user-centered designs that enhance digital experiences.",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5635AQGUtzVakt7D1A/profile-framedphoto-shrink_400_400/B56ZgRMPFmGUAc-/0/1752635077354?e=1759590000&v=beta&t=VzIgf7zcaVtfPzqLp4Y0nqnhgERhBAB0HtxeeSVVcMs",
     social: {
       linkedin: "https://www.linkedin.com/in/misbah-razzaq-2253002ab/",
     },
-  }
+  },
 ]
 
 interface TeamSectionProps {
@@ -89,7 +87,7 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Meet the experts behind HamHib Coders who are driving innovation and excellence
+                Meet the experts behind HamHib Coders who are driving innovation and excellence.
               </p>
             </div>
           </Reveal>
@@ -99,6 +97,7 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
           {displayMembers.map((member, index) => (
             <Reveal key={member.id} delay={index * 0.1}>
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+                {/* Image Section */}
                 <div className="relative h-80 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <img
@@ -106,6 +105,8 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
                     alt={member.name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
+
+                  {/* Social Links */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex space-x-3 justify-center">
                       {member.social.linkedin && (
@@ -144,6 +145,8 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
                     </div>
                   </div>
                 </div>
+
+                {/* Member Info */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{member.name}</h3>
                   <p className="text-green-600 dark:text-green-400 font-medium mb-3">{member.role}</p>
