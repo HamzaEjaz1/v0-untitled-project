@@ -47,6 +47,33 @@ const teamMembers: TeamMember[] = [
       linkedin: "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
     },
   },
+
+
+  ,
+
+  {
+    id: 4,
+    name: "Bilal Hassan ",
+    role: "Chief Operating Officer",
+    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
+    social: {
+      linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
+    },
+  },
+
+  ,
+
+  {
+    id: 5,
+    name: "Bilal Hassan ",
+    role: "Chief Operating Officer",
+    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
+    social: {
+      linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
+    },
+  },
 ]
 
 interface TeamSectionProps {
