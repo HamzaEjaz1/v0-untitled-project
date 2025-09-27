@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
   },
 
 
-  ,
+  
 
   {
     id: 4,
@@ -62,7 +62,7 @@ const teamMembers: TeamMember[] = [
     },
   },
 
-  ,
+
 
   {
     id: 5,
@@ -73,7 +73,7 @@ const teamMembers: TeamMember[] = [
     social: {
       linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
     },
-  },
+  }
 ]
 
 interface TeamSectionProps {
