@@ -16,7 +16,7 @@ export default function ServiceCard({ icon, title, description, className }: Ser
         className,
       )}
     >
-      <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-xl inline-block mb-6 group-hover:bg-green-200 dark:group-hover:bg-green-800/40 transition-colors duration-300">
+      <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-xl inline-block mb-6 group-hover:bg-primary/15 dark:group-hover:bg-primary/25 transition-colors duration-300">
         {icon}
       </div>
       <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{title}</h3>

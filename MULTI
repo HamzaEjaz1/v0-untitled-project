@@ -1,0 +1,368 @@
+// app/globals.css
+:root {
+  --background: 0 0% 95%; /* #F2F2F2 */
+  --foreground: 200 10% 5%; /* #0B0D0D */
+  --card: 0 0% 100%;
+  --card-foreground: 200 10% 5%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 200 10% 5%;
+  --primary: 219 49% 43%; /* #375CA6 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 222 39% 57%; /* #6986BF */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 222 39% 90%; /* soft tint from palette */
+  --muted-foreground: 220 6% 38%;
+  --accent: 222 39% 74%; /* #A0B3D9 */
+  --accent-foreground: 200 10% 5%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 14% 90%;
+  --input: 220 14% 90%;
+  --ring: 219 49% 43%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 200 10% 5%; /* #0B0D0D */
+  --foreground: 0 0% 95%;
+  --card: 210 8% 10%;
+  --card-foreground: 0 0% 95%;
+  --popover: 210 8% 10%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 222 39% 57%; /* #6986BF */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 222 39% 74%; /* #A0B3D9 */
+  --secondary-foreground: 200 10% 5%;
+  --muted: 210 10% 15%;
+  --muted-foreground: 220 10% 65%;
+  --accent: 219 49% 43%; /* #375CA6 */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 86% 97%;
+  --border: 210 10% 20%;
+  --input: 210 10% 20%;
+  --ring: 222 39% 57%;
+}
+
+// components/layout/header.tsx
+import Link from 'next/link';
+
+const Header = () => {
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+    { name: "Use Cases", path: "/use-cases" } // New nav item
+  ];
+
+  return (
+    <header className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-3">
+          <img src="/images/wrapifysolutions_logo.jpeg" alt="Wrapify Solutions logo" className="h-8 w-8 rounded-sm" />
+          <span className="text-xl md:text-2xl font-bold text-foreground">
+            <span className="text-primary">Wrapify</span>Solutions
+          </span>
+        </Link>
+        <nav className="hidden md:flex gap-6">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className="text-lg hover:text-primary"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded">
+          Get in Touch
+        </button>
+        <div className="md:hidden">
+          {/* Mobile menu implementation */}
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+
+// components/sections/service-card.tsx
+import React from 'react';
+
+const ServiceCard = ({ icon, title, description }) => {
+  return (
+    <div className="bg-primary/10 rounded-lg p-6">
+      <div className="flex items-center justify-center h-12 w-12 mb-4">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-base">{description}</p>
+    </div>
+  );
+};
+
+export default ServiceCard;
+
+// components/sections/value-card.tsx
+import React from 'react';
+
+const ValueCard = ({ icon, title, description }) => {
+  return (
+    <div className="bg-primary/10 rounded-lg p-6">
+      <div className="flex items-center justify-center h-12 w-12 mb-4">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-base">{description}</p>
+    </div>
+  );
+};
+
+export default ValueCard;
+
+// components/sections/testimonial-slider.tsx
+import React from 'react';
+import { FaQuoteLeft } from 'react-icons/fa';
+
+const TestimonialSlider = ({ testimonials }) => {
+  return (
+    <div className="bg-background text-foreground">
+      {testimonials.map((testimonial) => (
+        <div key={testimonial.id} className="flex items-center gap-4">
+          <FaQuoteLeft className="text-primary" />
+          <div>
+            <p className="text-lg mb-2">{testimonial.quote}</p>
+            <p className="text-base font-bold">{testimonial.author}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default TestimonialSlider;
+
+// components/sections/detailed-service-card.tsx
+import React from 'react';
+
+const DetailedServiceCard = ({ icon, title, description }) => {
+  return (
+    <div className="bg-primary/10 dark:bg-primary/20 rounded-lg p-6 group">
+      <div className="flex items-center justify-center h-12 w-12 mb-4 group-hover:bg-primary/15 dark:group-hover:bg-primary/25">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-base">{description}</p>
+    </div>
+  );
+};
+
+export default DetailedServiceCard;
+
+// app/page.tsx
+import React from 'react';
+import ServiceCard from '../components/sections/service-card';
+import DetailedServiceCard from '../components/sections/detailed-service-card';
+
+const Home = () => {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Welcome to Wrapify Solutions</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Service cards */}
+          <ServiceCard icon={<div className="text-primary">Icon</div>} title="Service 1" description="Description 1" />
+          <ServiceCard icon={<div className="text-primary">Icon</div>} title="Service 2" description="Description 2" />
+          <ServiceCard icon={<div className="text-primary">Icon</div>} title="Service 3" description="Description 3" />
+        </div>
+        <div className="bg-[#375CA6]/15 to-[#6986BF]/15 rounded-lg p-6">
+          {/* Detailed service cards */}
+          <DetailedServiceCard icon={<div className="text-primary">Icon</div>} title="Detailed Service 1" description="Description 1" />
+          <DetailedServiceCard icon={<div className="text-primary">Icon</div>} title="Detailed Service 2" description="Description 2" />
+          <DetailedServiceCard icon={<div className="text-primary">Icon</div>} title="Detailed Service 3" description="Description 3" />
+        </div>
+        <div className="bg-[#375CA6]/10 to-[#6986BF]/10 rounded-lg p-6">
+          {/* Stats counter */}
+        </div>
+        <div className="bg-background text-foreground">
+          {/* CTA section */}
+          <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+// app/about/page.tsx
+import React from 'react';
+
+const About = () => {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">About Wrapify Solutions</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Hero section */}
+          <div className="bg-[#375CA6]/15 to-[#6986BF]/15 rounded-lg p-6">
+            {/* Hero kicker */}
+            <p className="text-xl font-bold mb-4 text-primary">Our Mission</p>
+            {/* Hero content */}
+          </div>
+          {/* Image section */}
+          <div className="bg-background text-foreground">
+            {/* Image overlay gradient */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;
+
+// app/services/page.tsx
+import React from 'react';
+import DetailedServiceCard from '../components/sections/detailed-service-card';
+
+const Services = () => {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Detailed service cards */}
+          <DetailedServiceCard icon={<div className="text-primary">Icon</div>} title="Service 1" description="Description 1" />
+          <DetailedServiceCard icon={<div className="text-primary">Icon</div>} title="Service 2" description="Description 2" />
+          <DetailedServiceCard icon={<div className="text-primary">Icon</div>} title="Service 3" description="Description 3" />
+        </div>
+        <div className="bg-primary rounded-lg p-6">
+          {/* Process steps */}
+        </div>
+        <div className="bg-background text-foreground">
+          {/* CTA section */}
+          <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Services;
+
+// app/contact/page.tsx
+import React from 'react';
+
+const Contact = () => {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Contact Wrapify Solutions</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Contact form */}
+          <div className="bg-secondary/20 rounded-lg p-6">
+            {/* Form content */}
+            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded">
+              Submit
+            </button>
+          </div>
+          {/* WhatsApp support */}
+          <div className="bg-primary/10 rounded-lg p-6">
+            {/* WhatsApp icon */}
+            <button className="bg-whatsapp hover:bg-whatsapp text-white px-6 py-3 rounded">
+              Chat with us
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
+
+// components/sections/team-section.tsx
+import React from 'react';
+
+const TeamSection = ({ teamMembers }) => {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Team</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {teamMembers.map((member) => (
+            <div key={member.id} className="bg-background text-foreground rounded-lg p-6">
+              <p className="text-xl font-bold mb-2 text-primary">{member.name}</p>
+              <p className="text-base mb-4">{member.role}</p>
+              <div className="flex items-center gap-4">
+                {/* Social icons */}
+                <div className="bg-primary hover:bg-primary rounded-full p-2">
+                  {/* Icon */}
+                </div>
+                <div className="bg-primary hover:bg-primary rounded-full p-2">
+                  {/* Icon */}
+                </div>
+                <div className="bg-primary hover:bg-primary rounded-full p-2">
+                  {/* Icon */}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TeamSection;
+
+// components/layout/footer.tsx
+import React from 'react';
+import Link from 'next/link';
+
+const Footer = () => {
+  return (
+    <footer className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex items-center gap-3 mb-6">
+          <img src="/images/wrapifysolutions_logo.jpeg" alt="Wrapify Solutions logo" className="h-8 w-8 rounded-sm" />
+          <h3 className="text-2xl font-bold"><span className="text-primary">Wrapify</span>Solutions</h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Footer sections */}
+          <div className="hover:text-primary">
+            {/* Section content */}
+          </div>
+          <div className="hover:text-primary">
+            {/* Section content */}
+          </div>
+          <div className="hover:text-primary">
+            {/* Section content */}
+          </div>
+        </div>
+        <div className="mt-6">
+          {/* Contact icons */}
+          <div className="bg-primary rounded-full p-2 hover:bg-primary">
+            {/* Icon */}
+          </div>
+          <div className="bg-primary rounded-full p-2 hover:bg-primary">
+            {/* Icon */}
+          </div>
+          <div className="bg-primary rounded-full p-2 hover:bg-primary">
+            {/* Icon */}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

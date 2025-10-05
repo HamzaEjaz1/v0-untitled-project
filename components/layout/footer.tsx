@@ -9,29 +9,30 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-6">
-              <span className="text-green-400">Wrapify</span>Solutions
+              <span className="text-primary">Wrapify</span>Solutions
             </h3>
             <p className="text-gray-300 mb-6">
               We wrap ideas into intelligent digital solutions. Our mission is to deliver transformative digital
               experiences that empower businesses to grow.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/hamzaejaz-"
-                className="text-gray-300 hover:text-green-400 transition-colors"
+                className="text-gray-300 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </div>
@@ -42,22 +43,32 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/" className="text-gray-300 hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/projects" className="text-gray-300 hover:text-primary transition-colors">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="text-gray-300 hover:text-primary transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-primary transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -69,27 +80,27 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   Web Development
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   App Development
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   AI Agents
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   Chatbot Development
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   UI/UX Designing
                 </Link>
               </li>
@@ -101,16 +112,16 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-green-400 mr-3 mt-1" />
+                <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
                 <span className="text-gray-300">Islamabad, Pakistan</span>
               </li>
               <li className="flex items-start">
-                <Phone className="h-5 w-5 text-green-400 mr-3 mt-1" />
+                <Phone className="h-5 w-5 text-primary mr-3 mt-1" />
                 <span className="text-gray-300">+92 343 9024736</span>
               </li>
               <li className="flex items-start">
-                <Mail className="h-5 w-5 text-green-400 mr-3 mt-1" />
-                <span className="text-gray-300">hamzaejaz0771@gmail.com</span>
+                <Mail className="h-5 w-5 text-primary mr-3 mt-1" />
+                <span className="text-gray-300">business@wrapifysolutions.com</span>
               </li>
             </ul>
           </div>
@@ -122,13 +133,13 @@ export default function Footer() {
               © {new Date().getFullYear()} Wrapify Solutions. All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-green-400 text-sm">
+              <Link href="#" className="text-gray-400 hover:text-primary text-sm">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-green-400 text-sm">
+              <Link href="#" className="text-gray-400 hover:text-primary text-sm">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-green-400 text-sm">
+              <Link href="#" className="text-gray-400 hover:text-primary text-sm">
                 Cookie Policy
               </Link>
             </div>

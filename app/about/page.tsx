@@ -7,13 +7,12 @@ import ValueCard from "@/components/sections/value-card"
 export default function AboutPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <p className="text-green-600 dark:text-green-400 font-medium tracking-wider">ABOUT US</p>
+              <p className="text-primary font-medium tracking-wider">ABOUT US</p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
@@ -31,7 +30,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -58,7 +56,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Values */}
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <Reveal>
@@ -71,28 +68,28 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Reveal delay={0.1}>
               <ValueCard
-                icon={<Users className="h-8 w-8 text-green-600" />}
+                icon={<Users className="h-8 w-8 text-primary" />}
                 title="Expert Team"
                 description="Skilled professionals across multiple technology domains."
               />
             </Reveal>
             <Reveal delay={0.2}>
               <ValueCard
-                icon={<Target className="h-8 w-8 text-green-600" />}
+                icon={<Target className="h-8 w-8 text-primary" />}
                 title="Tailored Solutions"
                 description="Custom-built strategies to fit your unique vision."
               />
             </Reveal>
             <Reveal delay={0.3}>
               <ValueCard
-                icon={<Award className="h-8 w-8 text-green-600" />}
+                icon={<Award className="h-8 w-8 text-primary" />}
                 title="Innovation First"
                 description="Leveraging the latest technologies for future-ready products."
               />
             </Reveal>
             <Reveal delay={0.4}>
               <ValueCard
-                icon={<Briefcase className="h-8 w-8 text-green-600" />}
+                icon={<Briefcase className="h-8 w-8 text-primary" />}
                 title="Client-Centric"
                 description="Your goals drive everything we create."
               />
@@ -101,44 +98,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container px-4 mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1">
-              <Reveal>
-                <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20 z-10"></div>
-                  <img
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                    alt="Our Approach"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </Reveal>
-            </div>
-            <div className="flex-1 space-y-6">
-              <Reveal direction="right">
-                <h2 className="text-3xl md:text-4xl font-bold">Our Approach</h2>
-              </Reveal>
-              <Reveal direction="right" delay={0.1}>
-                <p className="text-gray-600 dark:text-gray-300">
-                  We believe in collaboration, customization, and creativity. By working closely with clients, we ensure
-                  every solution is aligned with their unique goals.
-                </p>
-              </Reveal>
-              <Reveal direction="right" delay={0.2}>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Our blend of cutting-edge technology and design thinking delivers results that inspire growth and
-                  innovation. We don't just deliver projects—we create digital experiences.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
       <TeamSection />
     </main>
   )

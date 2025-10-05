@@ -6,13 +6,12 @@ import ContactForm from "@/components/sections/contact-form"
 export default function ContactPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <p className="text-green-600 dark:text-green-400 font-medium tracking-wider">GET IN TOUCH</p>
+              <p className="text-primary font-medium tracking-wider">GET IN TOUCH</p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
@@ -29,7 +28,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col lg:flex-row gap-12">
@@ -53,8 +51,8 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <Reveal direction="right" delay={0.1}>
                   <div className="flex items-start gap-4">
-                    <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full">
-                      <MapPin className="h-6 w-6 text-green-600 dark:text-green-400" />
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Our Location</h3>
@@ -64,8 +62,8 @@ export default function ContactPage() {
                 </Reveal>
                 <Reveal direction="right" delay={0.2}>
                   <div className="flex items-start gap-4">
-                    <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full">
-                      <Phone className="h-6 w-6  text-green-600 dark:text-green-400" />
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Phone Number</h3>
@@ -75,12 +73,12 @@ export default function ContactPage() {
                 </Reveal>
                 <Reveal direction="right" delay={0.3}>
                   <div className="flex items-start gap-4">
-                    <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full">
-                      <Mail className="h-6 w-6  text-green-600 dark:text-green-400" />
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Email Address</h3>
-                      <p className="text-gray-600 dark:text-gray-300">hamzaejaz0771@gmail.com</p>
+                      <p className="text-gray-600 dark:text-gray-300">business@wrapifysolutions.com</p>
                     </div>
                   </div>
                 </Reveal>
@@ -100,7 +98,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <Reveal>

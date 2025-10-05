@@ -38,27 +38,22 @@ const testimonials = [
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
-  const [direction, setDirection] = useState<"left" | "right" | null>(null)
 
   const goToPrevious = () => {
     if (isAnimating) return
-    setDirection("left")
     setIsAnimating(true)
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1))
   }
 
   const goToNext = () => {
     if (isAnimating) return
-    setDirection("right")
     setIsAnimating(true)
     setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1))
   }
 
   useEffect(() => {
     if (isAnimating) {
-      const timer = setTimeout(() => {
-        setIsAnimating(false)
-      }, 500)
+      const timer = setTimeout(() => setIsAnimating(false), 500)
       return () => clearTimeout(timer)
     }
   }, [isAnimating])
@@ -71,7 +66,7 @@ export default function TestimonialSlider() {
   return (
     <div className="relative max-w-4xl mx-auto">
       <div className="overflow-hidden relative rounded-2xl bg-white dark:bg-gray-800 shadow-xl p-8 md:p-12">
-        <div className="absolute top-6 left-6 text-green-600 dark:text-green-400">
+        <div className="absolute top-6 left-6 text-primary">
           <Quote className="h-12 w-12 opacity-20" />
         </div>
 
@@ -100,19 +95,12 @@ export default function TestimonialSlider() {
           <button
             key={index}
             onClick={() => {
-              if (index > currentIndex) {
-                setDirection("right")
-              } else if (index < currentIndex) {
-                setDirection("left")
-              }
               setIsAnimating(true)
               setCurrentIndex(index)
             }}
             className={cn(
               "w-3 h-3 rounded-full transition-all duration-300",
-              index === currentIndex
-                ? "bg-green-600 w-8"
-                : "bg-gray-300 dark:bg-gray-600 hover:bg-green-400 dark:hover:bg-green-800",
+              index === currentIndex ? "bg-primary w-8" : "bg-gray-300 dark:bg-gray-600 hover:bg-primary/60",
             )}
             aria-label={`Go to testimonial ${index + 1}`}
           />

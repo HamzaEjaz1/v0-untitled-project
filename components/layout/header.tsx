@@ -13,6 +13,8 @@ const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
+  { name: "Projects", path: "/projects" },
+  { name: "Case Studies", path: "/case-studies" },
   { name: "Contact", path: "/contact" },
 ]
 
@@ -23,21 +25,10 @@ export default function Header() {
   const isMobile = useMobile()
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
 
   return (
     <header
@@ -49,20 +40,20 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-green-600 dark:text-green-400">
-              Wrapify<span className="text-gray-900 dark:text-white">Solutions</span>
+            <span className="text-2xl font-bold">
+              <span className="text-primary">Wrapify</span>
+              <span className="text-gray-900 dark:text-white">Solutions</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400",
-                  pathname === item.path ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-200",
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  pathname === item.path ? "text-primary" : "text-gray-700 dark:text-gray-200",
                 )}
               >
                 {item.name}
@@ -72,44 +63,33 @@ export default function Header() {
 
           <div className="flex items-center space-x-4">
             <ModeToggle />
-            <Button className="hidden md:flex bg-green-600 hover:bg-green-700 text-white" asChild>
+            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
               <Link href="/contact">Get in Touch</Link>
             </Button>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-gray-700 dark:text-gray-200"
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
+            <button className="md:hidden text-gray-700 dark:text-gray-200" onClick={() => setIsMenuOpen((v) => !v)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isMobile && isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 shadow-lg py-4 px-4 transition-all duration-300 ease-in-out">
-          <nav className="flex flex-col space-y-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 shadow-lg py-4 px-4">
+          <nav className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400 py-2",
-                  pathname === item.path ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-200",
+                  "text-sm font-medium transition-colors hover:text-primary py-2",
+                  pathname === item.path ? "text-primary" : "text-gray-700 dark:text-gray-200",
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Button
-              className="bg-green-600 hover:bg-green-700 text-white w-full"
-              asChild
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full" asChild>
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </nav>

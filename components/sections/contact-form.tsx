@@ -26,24 +26,17 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Format the message for WhatsApp
     const whatsappNumber = "+923118203633"
     const message = `Name: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, "_blank")
 
-    // Reset form and show success message
     setTimeout(() => {
       setIsSubmitting(false)
       setIsSubmitted(true)
       setFormData({ name: "", email: "", message: "" })
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
+      setTimeout(() => setIsSubmitted(false), 5000)
     }, 1000)
   }
 
@@ -96,7 +89,11 @@ export default function ContactForm() {
           />
         </div>
 
-        <Button type="submit" className="w-full  bg:text-green-400 text-white" disabled={isSubmitting}>
+        <Button
+          type="submit"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+          disabled={isSubmitting}
+        >
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -119,8 +116,8 @@ export default function ContactForm() {
 
       <div className="mt-12 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
         <div className="flex items-center gap-3 mb-4">
-          <div className="bg-green-100 p-3 rounded-full">
-            <MessageSquare className="h-6 w-6 text-green-600" />
+          <div className="bg-primary/10 p-3 rounded-full">
+            <MessageSquare className="h-6 w-6 text-primary" />
           </div>
           <h3 className="text-lg font-semibold">WhatsApp Support</h3>
         </div>

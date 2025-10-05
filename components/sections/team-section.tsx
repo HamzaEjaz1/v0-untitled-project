@@ -20,55 +20,48 @@ const teamMembers: TeamMember[] = [
     name: "Hamza Ejaz",
     role: "Chief Executive Officer",
     bio: "As CEO, I prioritize results over words. Partner with us for real outcomes.",
-    image:
-      "https://avatars.githubusercontent.com/u/112030412?s=400&u=3c149f011fb68b7fd6658b148e6b66108032345e&v=4",
-    social: {
-      linkedin: "https://www.linkedin.com/in/hamzaejaz-",
-    },
+    image: "/images/ceo.png",
+    social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
   },
   {
     id: 2,
-    name: "Bilal Hassan",
-    role: "Chief Operating Officer",
-    bio: "Driving operational excellence and strategic growth to elevate our company's success.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1761782400&v=beta&t=rm_7HzTR2s-Xpmqg8uLrs3-W_LyWngbF-5mEv8vK7K0",
-    social: {
-      linkedin: "https://www.linkedin.com/in/bilal-hassan-783249231/",
-    },
+    name: "Abu Bakkar",
+    role: "Chief Technology Officer",
+    bio: "Leading the charge in technological innovation to shape a smarter, more connected future.",
+    image: "/images/cto.png",
+    social: { linkedin: "https://www.linkedin.com/in/abu-bakkar-7a6a2621b/" },
   },
   {
     id: 3,
-    name: "Muhammad Atif Khan",
-    role: "Web Development Team Lead",
-    bio: "Leading the web development team to deliver robust, scalable, and user-friendly web applications that drive business success.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1761782400&v=beta&t=SVivtcm7UebEw_hipw1EAf_5Q77RqYAMCnyw5qo9xBo",
-    social: {
-      linkedin: "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
-    },
+    name: "Wasif Mehmod",
+    role: "Chief Operating Officer",
+    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
+    image: "/images/coo.png",
+    social: { linkedin: "https://www.linkedin.com/in/wasifmehmod/" },
   },
   {
     id: 4,
-    name: "Wasif Mehmood",
-    role: "AI Team Lead",
-    bio: "Guiding the AI team to develop cutting-edge machine learning and deep learning solutions that power intelligent, data-driven products.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQG7fBB3PiCAtA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720631855575?e=1761782400&v=beta&t=A-xU6_vzDjgdbPooXK3Kv3E7OCZDYAe4KM8_3hWX-mI",
-    social: {
-      linkedin: "https://www.linkedin.com/in/wasifmehmod/",
-    },
+    name: "Ayesha Khan",
+    role: "Head of Design",
+    bio: "Design leader focused on accessible, delightful interfaces and robust design systems.",
+    image: "/placeholder.svg?height=480&width=360",
+    social: { linkedin: "https://www.linkedin.com" },
   },
   {
     id: 5,
-    name: "Misbah Razzaq",
-    role: "UI/UX Design Lead",
-    bio: "Leading the UI/UX team to create intuitive, visually stunning, and user-centered designs that enhance digital experiences.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5635AQGUtzVakt7D1A/profile-framedphoto-shrink_400_400/B56ZgRMPFmGUAc-/0/1752635077354?e=1759590000&v=beta&t=VzIgf7zcaVtfPzqLp4Y0nqnhgERhBAB0HtxeeSVVcMs",
-    social: {
-      linkedin: "https://www.linkedin.com/in/misbah-razzaq-2253002ab/",
-    },
+    name: "Ali Raza",
+    role: "Lead Frontend Engineer",
+    bio: "Performance-focused engineer crafting resilient, maintainable UI architectures.",
+    image: "/placeholder.svg?height=480&width=360",
+    social: { github: "https://github.com", linkedin: "https://www.linkedin.com" },
+  },
+  {
+    id: 6,
+    name: "Sana Iqbal",
+    role: "AI Research Engineer",
+    bio: "Bridging research and product for practical, safe, and reliable AI systems.",
+    image: "/placeholder.svg?height=480&width=360",
+    social: { twitter: "https://twitter.com", linkedin: "https://www.linkedin.com" },
   },
 ]
 
@@ -76,7 +69,7 @@ interface TeamSectionProps {
   showAll?: boolean
 }
 
-export default function TeamSection({ showAll = false }: TeamSectionProps) {
+export default function TeamSection({ showAll = true }: TeamSectionProps) {
   const displayMembers = showAll ? teamMembers : teamMembers.slice(0, 3)
 
   return (
@@ -86,33 +79,28 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
-              <p className="text-gray-600 dark:text-gray-300">
-                Meet the experts behind HamHib Coders who are driving innovation and excellence.
-              </p>
+              <p className="text-gray-600 dark:text-gray-300">Meet the team driving innovation and excellence</p>
             </div>
           </Reveal>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayMembers.map((member, index) => (
-            <Reveal key={member.id} delay={index * 0.1}>
+            <Reveal key={member.id} delay={index * 0.05}>
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
-                {/* Image Section */}
                 <div className="relative h-80 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
+                    src={member.image || "/placeholder.svg?height=480&width=360&query=team+member"}
+                    alt={`${member.name} - ${member.role}`}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
-
-                  {/* Social Links */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex space-x-3 justify-center">
                       {member.social.linkedin && (
                         <a
                           href={member.social.linkedin}
-                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-pink-600 transition-colors duration-300"
+                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
                           aria-label={`${member.name}'s LinkedIn`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -123,7 +111,7 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
                       {member.social.twitter && (
                         <a
                           href={member.social.twitter}
-                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-pink-600 transition-colors duration-300"
+                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
                           aria-label={`${member.name}'s Twitter`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -134,7 +122,7 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
                       {member.social.github && (
                         <a
                           href={member.social.github}
-                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-pink-600 transition-colors duration-300"
+                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
                           aria-label={`${member.name}'s GitHub`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -145,11 +133,9 @@ export default function TeamSection({ showAll = false }: TeamSectionProps) {
                     </div>
                   </div>
                 </div>
-
-                {/* Member Info */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{member.name}</h3>
-                  <p className="text-green-600 dark:text-green-400 font-medium mb-3">{member.role}</p>
+                  <p className="text-primary font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">{member.bio}</p>
                 </div>
               </div>

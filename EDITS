@@ -1,0 +1,305 @@
+// There is no existing code. Please write it as a new file.
+
+// app/globals.css
+:root {
+  --background: 0 0% 95%;        /* #F2F2F2 */
+  --foreground: 150 10% 4%;      /* ~#0A0D0B */
+  --card: 0 0% 100%;
+  --card-foreground: 150 10% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 150 10% 4%;
+  --primary: 219 49% 43%;        /* #375CA6 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 215 49% 43%;      /* ~#3767A6 */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 210 10% 92%;
+  --muted-foreground: 220 6% 38%;
+  --accent: 215 35% 50%;         /* refined blue accent */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 210 14% 90%;
+  --input: 210 14% 90%;
+  --ring: 219 49% 43%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 219 95% 7%;      /* ~#010D26 */
+  --foreground: 0 0% 95%;
+  --card: 220 8% 12%;
+  --card-foreground: 0 0% 95%;
+  --popover: 220 8% 12%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 215 49% 43%;        /* ~#3767A6 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 219 49% 43%;      /* #375CA6 */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 220 10% 18%;
+  --muted-foreground: 220 10% 70%;
+  --accent: 219 49% 43%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 86% 97%;
+  --border: 220 10% 22%;
+  --input: 220 10% 22%;
+  --ring: 215 49% 43%;
+}
+
+// components/ui/animated-text.tsx
+export default function AnimatedText({ text }) {
+  return (
+    <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-[#375CA6] to-[#3767A6]">
+      {text}
+    </span>
+  );
+}
+
+// components/ui/reveal.tsx
+import React, { useState, useRef, useEffect } from 'react';
+import { cn } from '@/utils';
+
+interface RevealProps {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+  direction?: "up" | "down" | "left" | "right";
+  variant?: "slide" | "fade" | "zoom";
+}
+
+export function Reveal({ children, className, delay = 0, direction = "up", variant = "slide" }: RevealProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const getInitialStyles = () => {
+    const base = "opacity-0";
+    const slide =
+      direction === "up"
+        ? "translate-y-16"
+        : direction === "down"
+        ? "-translate-y-16"
+        : direction === "left"
+        ? "translate-x-16"
+        : "-translate-x-16";
+    if (variant === "fade") return `${base}`;
+    if (variant === "zoom") return `${base} scale-95`;
+    return `${base} ${slide}`;
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, []);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let stepCount = 0;
+    const step = () => {
+      stepCount++;
+      if (stepCount >= 100) {
+        clearInterval(interval);
+      }
+    };
+
+    const interval = setInterval(step, delay);
+
+    return () => clearInterval(interval);
+  }, [isVisible, delay]);
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "transition-all duration-700 ease-out will-change-transform",
+        isVisible ? "opacity-100 transform-none scale-100" : getInitialStyles(),
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+}
+
+// components/layout/header.tsx
+import Link from 'next/link';
+
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "Case Studies", path: "/case-studies" },
+  { name: "Contact", path: "/contact" },
+];
+
+export default function Header() {
+  return (
+    <header className="bg-background">
+      <nav className="flex justify-center">
+        {navItems.map((item) => (
+          <Link key={item.name} href={item.path} className="px-4 py-2">
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+    </header>
+  );
+}
+
+// components/layout/footer.tsx
+export default function Footer() {
+  return (
+    <footer className="bg-background text-foreground">
+      <p>Contact us at business@wrapifysolutions.com</p>
+    </footer>
+  );
+}
+
+// app/contact/page.tsx
+import { cn } from '@/utils';
+
+export default function ContactPage() {
+  return (
+    <div className="bg-background text-foreground">
+      <h1>Contact Us</h1>
+      <ul>
+        <li className="text-primary">Email Address: business@wrapifysolutions.com</li>
+        <li className="bg-primary/10">Other Contact Info</li>
+      </ul>
+    </div>
+  );
+}
+
+// components/sections/testimonial-slider.tsx
+const testimonials = [
+  {
+    id: 1,
+    content:
+      "Sehat ke Baat helped us scale health education to thousands. The UX is clean, fast, and truly accessible.",
+    author: "Dr. Amna Siddiqui",
+    position: "Program Lead, Sehat Initiative",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&q=80",
+  },
+  {
+    id: 2,
+    content:
+      "Quick Qari exceeded expectations—streaming audio, progress tracking, and great performance on low-end devices.",
+    author: "Umar Farooq",
+    position: "Founder, Quick Qari",
+    avatar: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=256&q=80",
+  },
+  {
+    id: 3,
+    content:
+      "HAndyQ made everyday productivity simple for our teams. The offline-first approach was a game changer.",
+    author: "Sarah Ahmed",
+    position: "Operations, HandyQ",
+    avatar: "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=256&q=80",
+  },
+  {
+    id: 4,
+    content:
+      "Aussie Take Off website looks premium and loads fast. The SEO work improved sign-ups within weeks.",
+    author: "James Walker",
+    position: "Owner, Aussie Take Off",
+    avatar: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=256&q=80",
+  },
+];
+
+export default function TestimonialSlider() {
+  return (
+    <div className="bg-background text-foreground">
+      {testimonials.map((testimonial) => (
+        <div key={testimonial.id} className="p-4">
+          <p>{testimonial.content}</p>
+          <p>{testimonial.author}</p>
+          <p>{testimonial.position}</p>
+          <img src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.author} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// components/sections/stats-counter.tsx
+import React, { useState, useRef, useEffect } from 'react';
+import { cn } from '@/utils';
+
+export default function StatsCounter({ value }) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setHasAnimated(true);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, []);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!hasAnimated) return;
+
+    let stepCount = 0;
+    const step = () => {
+      stepCount++;
+      setCount((prevCount) => Math.min(prevCount + 1, value));
+      if (count >= value) {
+        clearInterval(interval);
+      }
+    };
+
+    const interval = setInterval(step, 10);
+
+    return () => clearInterval(interval);
+  }, [hasAnimated, value, count]);
+
+  return (
+    <div ref={ref} className="bg-background text-foreground">
+      <p>{count}</p>
+    </div>
+  );
+}
+
+// app/services/page.tsx
+import Link from 'next/link';
+
+export default function ServicesPage() {
+  return (
+    <div className="bg-background text-foreground">
+      <h1>Our Services</h1>
+      <Link href="/case-studies" className="text-primary">
+        See Case Studies
+      </Link>
+    </div>
+  );
+}

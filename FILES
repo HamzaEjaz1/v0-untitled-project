@@ -1,0 +1,812 @@
+// app/globals.css
+:root {
+  --background: 0 0% 95%;      /* #F2F2F2 */
+  --foreground: 200 10% 5%;    /* #0B0D0D */
+  --card: 0 0% 100%;
+  --card-foreground: 200 10% 5%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 200 10% 5%;
+  --primary: 219 49% 43%;      /* #375CA6 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 222 39% 57%;    /* #6986BF */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 222 39% 90%;
+  --muted-foreground: 220 6% 38%;
+  --accent: 222 39% 74%;       /* #A0B3D9 */
+  --accent-foreground: 200 10% 5%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 14% 90%;
+  --input: 220 14% 90%;
+  --ring: 219 49% 43%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 200 10% 5%;    /* #0B0D0D */
+  --foreground: 0 0% 95%;
+  --card: 210 8% 10%;
+  --card-foreground: 0 0% 95%;
+  --popover: 210 8% 10%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 222 39% 57%;      /* #6986BF */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 222 39% 74%;    /* #A0B3D9 */
+  --secondary-foreground: 200 10% 5%;
+  --muted: 210 10% 15%;
+  --muted-foreground: 220 10% 65%;
+  --accent: 219 49% 43%;       /* #375CA6 */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 86% 97%;
+  --border: 210 10% 20%;
+  --input: 210 10% 20%;
+  --ring: 222 39% 57%;
+}
+
+// components/layout/header.tsx
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Menu, X } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/mode-toggle"
+import { cn } from "@/lib/utils"
+import { useMobile } from "@/hooks/use-mobile"
+
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "Use Cases", path: "/use-cases" },
+  { name: "Contact", path: "/contact" },
+]
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isMobile = useMobile()
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5",
+      )}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrapifysolutions_logo-OmmhmiVjA1GRLX2bItS0mwAJSslxNH.jpeg"
+              alt="Wrapify Solutions logo"
+              className="h-8 w-8 rounded-sm"
+            />
+            <span className="text-2xl font-bold">
+              <span className="text-primary">Wrapify</span>
+              <span className="text-foreground">Solutions</span>
+            </span>
+          </Link>
+
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  pathname === item.path ? "text-primary" : "text-foreground/80",
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center space-x-4">
+            <ModeToggle />
+            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <Link href="/contact">Get in Touch</Link>
+            </Button>
+            <button
+              className="md:hidden text-foreground"
+              onClick={() => setIsMenuOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isMobile && isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 shadow-lg py-4 px-4">
+          <nav className="flex flex-col space-y-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary py-2",
+                  pathname === item.path ? "text-primary" : "text-foreground/80",
+                )}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+              asChild
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Link href="/contact">Get in Touch</Link>
+            </Button>
+          </nav>
+        </div>
+      )}
+    </header>
+  )
+}
+
+// components/layout/footer.tsx
+import Link from "next/link"
+import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react'
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrapifysolutions_logo-OmmhmiVjA1GRLX2bItS0mwAJSslxNH.jpeg"
+                alt="Wrapify Solutions logo"
+                className="h-8 w-8 rounded-sm"
+              />
+              <h3 className="text-2xl font-bold">
+                <span className="text-primary">Wrapify</span>Solutions
+              </h3>
+            </div>
+            <p className="text-gray-300 mb-6">
+              We wrap ideas into intelligent digital solutions. Our mission is to deliver transformative digital
+              experiences that empower businesses to grow.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Facebook">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Twitter">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/hamzaejaz-"
+                className="text-gray-300 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              <li><Link href="/" className="text-gray-300 hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/use-cases" className="text-gray-300 hover:text-primary transition-colors">Use Cases</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact Us</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Our Services</h3>
+            <ul className="space-y-3">
+              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">Web Development</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">App Development</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">AI Agents</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">Chatbot Development</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">UI/UX Designing</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
+                <span className="text-gray-300">Islamabad, Pakistan</span>
+              </li>
+              <li className="flex items-start">
+                <Phone className="h-5 w-5 text-primary mr-3 mt-1" />
+                <span className="text-gray-300">+92 343 9024736</span>
+              </li>
+              <li className="flex items-start">
+                <Mail className="h-5 w-5 text-primary mr-3 mt-1" />
+                <span className="text-gray-300">hamzaejaz0771@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Wrapify Solutions. All Rights Reserved.</p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="#" className="text-gray-400 hover:text-primary text-sm">Privacy Policy</Link>
+              <Link href="#" className="text-gray-400 hover:text-primary text-sm">Terms of Service</Link>
+              <Link href="#" className="text-gray-400 hover:text-primary text-sm">Cookie Policy</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+// components/sections/service-card.tsx
+import type React from "react"
+import { cn } from "@/lib/utils"
+
+interface ServiceCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+  className?: string
+}
+
+export default function ServiceCard({ icon, title, description, className }: ServiceCardProps) {
+  return (
+    <div
+      className={cn(
+        "bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group",
+        className,
+      )}
+    >
+      <div className="bg-primary/10 p-4 rounded-xl inline-block mb-6 group-hover:bg-primary/15 transition-colors duration-300">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{description}</p>
+    </div>
+  )
+}
+
+// components/sections/value-card.tsx
+import type React from "react"
+import { cn } from "@/lib/utils"
+
+interface ValueCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+  className?: string
+}
+
+export default function ValueCard({ icon, title, description, className }: ValueCardProps) {
+  return (
+    <div
+      className={cn(
+        "bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group",
+        className,
+      )}
+    >
+      <div className="bg-primary/10 p-3 rounded-full inline-flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors duration-300">
+        {icon}
+      </div>
+      <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300 text-sm">{description}</p>
+    </div>
+  )
+}
+
+// components/sections/detailed-service-card.tsx
+import type React from "react"
+import { Check } from 'lucide-react'
+import { cn } from "@/lib/utils"
+
+interface DetailedServiceCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+  features: string[]
+  className?: string
+}
+
+export default function DetailedServiceCard({
+  icon,
+  title,
+  description,
+  features,
+  className,
+}: DetailedServiceCardProps) {
+  return (
+    <div
+      className={cn(
+        "bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group",
+        className,
+      )}
+    >
+      <div className="flex items-start gap-6">
+        <div className="bg-primary/10 p-4 rounded-xl group-hover:bg-primary/15 transition-colors duration-300">
+          {icon}
+        </div>
+        <div>
+          <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">{title}</h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">{description}</p>
+
+          <ul className="space-y-2">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <Check className="h-5 w-5 text-primary mt-0.5" />
+                <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// components/sections/stats-counter.tsx
+"use client"
+
+import type React from "react"
+import { useEffect, useRef, useState } from "react"
+import { Users, Code, Award, Briefcase } from 'lucide-react'
+import { cn } from "@/lib/utils"
+
+interface StatProps {
+  icon: React.ReactNode
+  value: number
+  label: string
+  duration?: number
+  className?: string
+}
+
+const StatItem = ({ icon, value, label, duration = 1500, className }: StatProps) => {
+  const [count, setCount] = useState(0)
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) setHasAnimated(true)
+      },
+      { threshold: 0.3 },
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [hasAnimated])
+
+  useEffect(() => {
+    if (!hasAnimated) return
+    let current = 0
+    const end = value
+    const step = Math.max(1, Math.floor(end / 100))
+    const totalSteps = Math.ceil(end / step)
+    const incrementTime = duration / totalSteps
+    let timer: NodeJS.Timeout
+
+    const tick = () => {
+      current = Math.min(end, current + step)
+      setCount(current)
+      if (current < end) timer = setTimeout(tick, incrementTime)
+    }
+    timer = setTimeout(tick, incrementTime)
+    return () => clearTimeout(timer)
+  }, [hasAnimated, value, duration])
+
+  return (
+    <div ref={ref} className={cn("flex flex-col items-center text-center", className)}>
+      <div className="bg-primary/10 p-4 rounded-full mb-4">{icon}</div>
+      <h3 className="text-4xl font-bold mb-2">{count}+</h3>
+      <p className="text-muted-foreground">{label}</p>
+    </div>
+  )
+}
+
+export default function StatsCounter() {
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <StatItem icon={<Briefcase className="h-8 w-8 text-primary" />} value={50} label="Projects Completed" />
+      <StatItem icon={<Users className="h-8 w-8 text-primary" />} value={25} label="Happy Clients" />
+      <StatItem icon={<Code className="h-8 w-8 text-primary" />} value={10000} label="Lines of Code" />
+      <StatItem icon={<Award className="h-8 w-8 text-primary" />} value={15} label="Awards Won" />
+    </div>
+  )
+}
+
+// components/sections/testimonial-slider.tsx
+import { useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
+import { Quote } from 'lucide-react'
+import "swiper/css"
+import "swiper/css/navigation"
+import { cn } from "@/lib/utils"
+
+interface Testimonial {
+  id: number
+  name: string
+  role: string
+  quote: string
+}
+
+const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    name: "John Doe",
+    role: "CEO, XYZ Corp",
+    quote: "Wrapify Solutions exceeded our expectations with their innovative approach.",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    role: "CTO, ABC Inc",
+    quote: "Their technical expertise is top-notch.",
+  },
+]
+
+export default function TestimonialSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  return (
+    <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        className="mySwiper"
+        onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
+      >
+        {testimonials.map((testimonial) => (
+          <SwiperSlide key={testimonial.id}>
+            <div className="flex flex-col items-center">
+              <div className="absolute top-6 left-6 text-primary">
+                <Quote className="h-12 w-12 opacity-20" />
+              </div>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">{testimonial.quote}</p>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{testimonial.name}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{testimonial.role}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="flex justify-center mt-8">
+        {testimonials.map((_, index) => (
+          <div
+            key={index}
+            className={cn(
+              "w-4 h-4 rounded-full mx-2",
+              index === currentIndex ? "bg-primary" : "bg-gray-300 dark:bg-gray-600 hover:bg-primary/60",
+            )}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// components/sections/team-section.tsx
+import { Reveal } from "@/components/ui/reveal"
+import { Linkedin, Twitter, Github } from 'lucide-react'
+
+interface TeamMember {
+  id: number
+  name: string
+  role: string
+  bio: string
+  image: string
+  social: {
+    linkedin?: string
+    twitter?: string
+    github?: string
+  }
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    id: 1,
+    name: "Hamza Ejaz",
+    role: "Chief Executive Officer",
+    bio: "As CEO, I prioritize results over words. Partner with us for real outcomes.",
+    image: "/images/ceo.png",
+    social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
+  },
+  {
+    id: 2,
+    name: "Abu Bakkar",
+    role: "Chief Technology Officer",
+    bio: "Leading the charge in technological innovation to shape a smarter, more connected future.",
+    image: "/images/cto.png",
+    social: { linkedin: "https://www.linkedin.com/in/abu-bakkar-7a6a2621b/" },
+  },
+  {
+    id: 3,
+    name: "Wasif Mehmod",
+    role: "Chief Operating Officer",
+    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
+    image: "/images/coo.png",
+    social: { linkedin: "https://www.linkedin.com/in/wasifmehmod/" },
+  },
+]
+
+interface TeamSectionProps {
+  showAll?: boolean
+}
+
+export default function TeamSection({ showAll = false }: TeamSectionProps) {
+  const displayMembers = showAll ? teamMembers : teamMembers.slice(0, 3)
+
+  return (
+    <section className="py-20">
+      <div className="container px-4 mx-auto">
+        {!showAll && (
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                Meet the experts behind Wrapify Solutions who are driving innovation and excellence
+              </p>
+            </div>
+          </Reveal>
+        )}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayMembers.map((member, index) => (
+            <Reveal key={member.id} delay={index * 0.1}>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+                <div className="relative h-80 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <img
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="flex space-x-3 justify-center">
+                      {member.social.linkedin && (
+                        <a
+                          href={member.social.linkedin}
+                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
+                          aria-label={`${member.name}'s LinkedIn`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Linkedin className="h-5 w-5 text-white" />
+                        </a>
+                      )}
+                      {member.social.twitter && (
+                        <a
+                          href={member.social.twitter}
+                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
+                          aria-label={`${member.name}'s Twitter`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Twitter className="h-5 w-5 text-white" />
+                        </a>
+                      )}
+                      {member.social.github && (
+                        <a
+                          href={member.social.github}
+                          className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
+                          aria-label={`${member.name}'s GitHub`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-5 w-5 text-white" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{member.name}</h3>
+                  <p className="text-primary font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{member.bio}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// components/sections/contact-form.tsx
+"use client"
+
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission logic here
+  }
+
+  return (
+    <form className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg" onSubmit={handleSubmit}>
+      <div className="mb-4">
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white dark:border-gray-600"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white dark:border-gray-600"
+          required
+        />
+      </div>
+      <div className="mb-6">
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={4}
+          className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white dark:border-gray-600"
+          required
+        />
+      </div>
+      <div className="flex justify-between">
+        <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          Submit
+        </Button>
+        <Button className="bg-green-600 hover:bg-green-700 text-white">
+          WhatsApp
+        </Button>
+      </div>
+    </form>
+  )
+}
+
+// app/page.tsx
+import { Metadata } from "next"
+import { cn } from "@/lib/utils"
+import HeroSection from "@/components/sections/hero-section"
+import AboutSection from "@/components/sections/about-section"
+import ServicesSection from "@/components/sections/services-section"
+import StatsCounter from "@/components/sections/stats-counter"
+import TestimonialSlider from "@/components/sections/testimonial-slider"
+import TeamSection from "@/components/sections/team-section"
+import ContactForm from "@/components/sections/contact-form"
+
+export const metadata: Metadata = {
+  title: "Wrapify Solutions",
+  description: "We wrap ideas into intelligent digital solutions.",
+}
+
+export default function Home() {
+  return (
+    <main className="bg-white dark:bg-gray-900">
+      <HeroSection kicker="text-primary" />
+      <AboutSection kicker="text-primary" />
+      <ServicesSection kicker="text-primary" />
+      <StatsCounter />
+      <TestimonialSlider />
+      <TeamSection />
+      <ContactForm />
+    </main>
+  )
+}
+
+// app/services/page.tsx
+import { Metadata } from "next"
+import { cn } from "@/lib/utils"
+import ProcessSection from "@/components/sections/process-section"
+import ServicesGrid from "@/components/sections/services-grid"
+import CTASection from "@/components/sections/cta-section"
+
+export const metadata: Metadata = {
+  title: "Our Services - Wrapify Solutions",
+  description: "Discover the range of services we offer to elevate your business.",
+}
+
+export default function Services() {
+  return (
+    <main className="bg-white dark:bg-gray-900">
+      <ProcessSection kicker="text-primary" />
+      <ServicesGrid kicker="text-primary" />
+      <CTASection kicker="text-primary" />
+    </main>
+  )
+}
+
+// app/about/page.tsx
+import { Metadata } from "next"
+import { cn } from "@/lib/utils"
+import AboutSection from "@/components/sections/about-section"
+import ApproachSection from "@/components/sections/approach-section"
+import TeamSection from "@/components/sections/team-section"
+
+export const metadata: Metadata = {
+  title: "About Us - Wrapify Solutions",
+  description: "Learn more about Wrapify Solutions and our mission.",
+}
+
+export default function About() {
+  return (
+    <main className="bg-white dark:bg-gray-900">
+      <AboutSection kicker="text-primary" />
+      <ApproachSection kicker="text-primary" />
+      <TeamSection />
+    </main>
+  )
+}
+
+// app/contact/page.tsx
+import { Metadata } from "next"
+import { cn } from "@/lib/utils"
+import ContactForm from "@/components/sections/contact-form"
+import HeroSection from "@/components/sections/hero-section"
+
+export const metadata: Metadata = {
+  title: "Contact Us - Wrapify Solutions",
+  description: "Get in touch with Wrapify Solutions for any inquiries.",
+}
+
+export default function Contact() {
+  return (
+    <main className="bg-white dark:bg-gray-900">
+      <HeroSection kicker="text-primary" />
+      <ContactForm />
+    </main>
+  )
+}
