@@ -12,7 +12,7 @@ type UseCase = {
 const useCases: UseCase[] = [
   {
     title: "HAndyQ",
-    description: "A handy, on-the-go utility app designed to streamline daily tasks with a clean, intuitive interface.",
+    description: "https://media.licdn.com/dms/image/v2/D4D33AQG-eXpqTJuCnw/productpage-image_1128_635/B4DZm_ioHaJYAM-/0/1759855152092?e=1762246800&v=beta&t=mn2TN37I680MAWPnQlTbyPwbBf01GisAn9BCrbx2PKI",
     category: "App Development",
     image: "/mobile-productivity-app-screenshot.jpg",
   },
@@ -21,20 +21,20 @@ const useCases: UseCase[] = [
     description:
       "A health-focused app enabling users to access wellness content and track daily health habits with ease.",
     category: "App Development",
-    image: "/health-wellness-mobile-app-ui.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D33AQF-Vf92XwaTDQ/productpage-image_1128_635/B4DZnPziu_GQAM-/0/1760128021414?e=1762246800&v=beta&t=ZBxrN2oLu3CdeAjGmyATRxrAe_pJ6ZrPTG4AyDB1Bqw",
   },
   {
     title: "Quick Qari",
     description: "An educational app for learning and recitation with audio guidance and progress tracking.",
     category: "App Development",
-    image: "/education-learning-mobile-app-recitation.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D33AQEE8oZpIQlZHA/productpage-image_1128_635/B4DZm_idTtKQAM-/0/1759855106411?e=1762246800&v=beta&t=wGNMy5vfhQfGcoIYfEnwPdUzBwRj9jZz4elONRDrvg0",
   },
   {
     title: "Company Profile",
     description:
       "A modern, responsive corporate website showcasing brand identity, services, and a compelling company story.",
     category: "Web Development",
-    image: "/corporate-company-profile-website-landing.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D33AQExEdjvFAurYA/productpage-image_1128_635/B4DZoqBC2_GsAM-/0/1761641509709?e=1762246800&v=beta&t=lisVOzdZbtD4U8RPadfN7MDniOLyVKkmZalIsl4MtxE",
   },
   {
     title: "Aussie Take Off Website",
