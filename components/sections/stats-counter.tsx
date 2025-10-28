@@ -1,6 +1,5 @@
 "use client"
 
-import type React from "react"
 import { useEffect, useState } from "react"
 import { Users, Code, Award, Briefcase } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -13,31 +12,31 @@ interface StatProps {
   className?: string
 }
 
-const StatItem = ({ icon, value, label, duration = 2000, className }: StatProps) => {
+const StatItem = ({ icon, value, label, duration = 800, className }: StatProps) => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     let start = 0
-    const end = value
-    const incrementTime = duration / end
-    let timer: NodeJS.Timeout
+    const startTime = performance.now()
 
-    const updateCount = () => {
-      start += 1
-      setCount(start)
-      if (start < end) {
-        timer = setTimeout(updateCount, incrementTime)
+    const updateCount = (currentTime: number) => {
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const newCount = Math.floor(progress * value)
+      setCount(newCount)
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount)
       }
     }
 
-    timer = setTimeout(updateCount, incrementTime)
-    return () => clearTimeout(timer)
+    requestAnimationFrame(updateCount)
   }, [value, duration])
 
   return (
     <div className={cn("flex flex-col items-center text-center", className)}>
       <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-full mb-4">{icon}</div>
-      <h3 className="text-4xl font-bold mb-2">{count}+</h3>
+      <h3 className="text-4xl font-bold mb-2">{count.toLocaleString()}+</h3>
       <p className="text-gray-600 dark:text-gray-300">{label}</p>
     </div>
   )
