@@ -16,53 +16,47 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    id: 1,
-    name: "Hamza Ejaz",
-    role: "Chief Executive Officer",
-    bio: "As CEO, I prioritize results over words. Partner with us for real outcomes.",
-    image: "/images/ceo.png",
-    social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
-  },
-  {
-    id: 2,
-    name: "Abu Bakkar",
-    role: "Chief Technology Officer",
-    bio: "Leading the charge in technological innovation to shape a smarter, more connected future.",
-    image: "/images/cto.png",
-    social: { linkedin: "https://www.linkedin.com/in/abu-bakkar-7a6a2621b/" },
-  },
-  {
-    id: 3,
-    name: "Wasif Mehmod",
-    role: "Chief Operating Officer",
-    bio: "Driving Operational Excellence and Strategic Growth to Elevate our Company's Success.",
-    image: "/images/coo.png",
-    social: { linkedin: "https://www.linkedin.com/in/wasifmehmod/" },
-  },
-  {
-    id: 4,
-    name: "Ayesha Khan",
-    role: "Head of Design",
-    bio: "Design leader focused on accessible, delightful interfaces and robust design systems.",
-    image: "/placeholder.svg?height=480&width=360",
-    social: { linkedin: "https://www.linkedin.com" },
-  },
-  {
-    id: 5,
-    name: "Ali Raza",
-    role: "Lead Frontend Engineer",
-    bio: "Performance-focused engineer crafting resilient, maintainable UI architectures.",
-    image: "/placeholder.svg?height=480&width=360",
-    social: { github: "https://github.com", linkedin: "https://www.linkedin.com" },
-  },
-  {
-    id: 6,
-    name: "Sana Iqbal",
-    role: "AI Research Engineer",
-    bio: "Bridging research and product for practical, safe, and reliable AI systems.",
-    image: "/placeholder.svg?height=480&width=360",
-    social: { twitter: "https://twitter.com", linkedin: "https://www.linkedin.com" },
-  },
+   {
+  id: 1,
+  name: "Hamza Ejaz",
+  role: "Chief Executive Officer",
+  bio: "As the CEO of Wrapify Solutions, I lead with vision and execution—turning ideas into measurable results. My focus is on driving innovation, empowering teams, and building partnerships that deliver real impact.",
+  image: "/images/ceo.png",
+  social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
+},
+{
+  id: 2,
+  name: "Bilal Hassan",
+  role: "Chief Operational Officer",
+  bio: "As COO, I focus on operational excellence and technological advancement, ensuring seamless project execution and sustainable growth for our clients and company alike.",
+  image: "/images/cto.png",
+  social: { linkedin: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-crop_800_800/B4DZl2pqJnJYAI-/0/1758632257864?e=1762992000&v=beta&t=ydVgD8eVDaUwHVvouwwAgTKfsn_mMWN-wpBrP_62InQ" },
+},
+{
+  id: 3,
+  name: "Wasif Mehmod",
+  role: "AI Team Lead",
+  bio: "Leading the AI division with a focus on research, innovation, and scalable solutions. Passionate about leveraging data and intelligence to build smarter digital ecosystems.",
+  image: "/images/coo.png",
+  social: { linkedin: "https://www.linkedin.com/in/wasifmehmod/" },
+},
+{
+  id: 4,
+  name: "Muhammad Atif Khan",
+  role: "Web Team Lead",
+  bio: "Dedicated to developing high-performance, user-centric web solutions that merge creativity with functionality. I aim to build scalable architectures that empower digital transformation.",
+  image: "/placeholder.svg?height=480&width=360",
+  social: { linkedin: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1762992000&v=beta&t=c7-185a4n0_Sn5qxgneueYE368LAGmrSeM_iaFp0XRA" },
+},
+{
+  id: 5,
+  name: "Misbah Raazaq",
+  role: "UI/UX Designer",
+  bio: "A design enthusiast committed to crafting intuitive and engaging user experiences. I bridge creativity with strategy to design interfaces that are both functional and visually stunning.",
+  image: "/placeholder.svg?height=480&width=360",
+  social: {linkedin: "https://media.licdn.com/dms/image/v2/D5603AQHHiIm1wE-i5g/profile-displayphoto-scale_400_400/B56ZmmgszNJ0Ak-/0/1759435215831?e=1762992000&v=beta&t=PZ0FjXOeEIIZnzdEMSbw3Hac53z0eeHipIBzI7vX6to" },
+}
+
 ]
 
 interface TeamSectionProps {
