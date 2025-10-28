@@ -41,7 +41,7 @@ const useCases: UseCase[] = [
     description:
       "A sleek marketing site tailored for an Australian audience, optimized for performance and conversions.",
     category: "Web Development",
-    image: "/australian-business-website-landing-page.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D33AQG3m9HW5BlrlA/productpage-image_1128_635/B4DZnUpfONJMAQ-/0/1760209270904?e=1762246800&v=beta&t=KrXG4H4N_773Zpq-ItcMLov8Z2kyCRcWUcGtfFn7T8I",
   },
 ]
 
