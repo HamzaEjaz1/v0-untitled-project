@@ -16,25 +16,21 @@ export default function Footer() {
               experiences that empower businesses to grow.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61581415486409" className="text-gray-300 hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="Instagram">
+           
+              <a href="https://www.instagram.com/wrapifysolutions/" className="text-gray-300 hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/hamzaejaz-"
+                href="https://www.linkedin.com/company/wrapifysolutions"
                 className="text-gray-300 hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </a>
+            
             </div>
           </div>
 
