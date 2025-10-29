@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react"
+import Image from "next/image"
+import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -8,19 +9,31 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">
-              <span className="text-primary">Wrapify</span>Solutions
-            </h3>
+            <Image
+              src="/wrapify-logo.png"
+              alt="Wrapify Solutions"
+              width={160}
+              height={50}
+              className="h-12 w-auto mb-6"
+            />
             <p className="text-gray-300 mb-6">
               We wrap ideas into intelligent digital solutions. Our mission is to deliver transformative digital
               experiences that empower businesses to grow.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61581415486409" className="text-gray-300 hover:text-primary transition-colors" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/profile.php?id=61581415486409"
+                className="text-gray-300 hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-           
-              <a href="https://www.instagram.com/wrapifysolutions/" className="text-gray-300 hover:text-primary transition-colors" aria-label="Instagram">
+
+              <a
+                href="https://www.instagram.com/wrapifysolutions/"
+                className="text-gray-300 hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
@@ -30,7 +43,6 @@ export default function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-            
             </div>
           </div>
 
@@ -51,16 +63,6 @@ export default function Footer() {
               <li>
                 <Link href="/services" className="text-gray-300 hover:text-primary transition-colors">
                   Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-gray-300 hover:text-primary transition-colors">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-studies" className="text-gray-300 hover:text-primary transition-colors">
-                  Case Studies
                 </Link>
               </li>
               <li>

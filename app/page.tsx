@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Code, Smartphone, Bot, MessageSquare, Palette } from "lucide-react"
+import { ArrowRight, Code, Smartphone, Bot, MessageSquare, Palette, Zap, Shield, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import StatsCounter from "@/components/sections/stats-counter"
 import ServiceCard from "@/components/sections/service-card"
@@ -9,6 +9,7 @@ import { Reveal } from "@/components/ui/reveal"
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
+      {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
         <div className="container px-4 mx-auto relative z-10">
@@ -60,6 +61,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <Reveal>
@@ -68,6 +70,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <Reveal>
@@ -115,10 +118,68 @@ export default function Home() {
                 description="Human-centered designs that blend functionality with stunning visuals."
               />
             </Reveal>
+            <Reveal delay={0.6}>
+              <ServiceCard
+                icon={<Zap className="h-8 w-8 text-primary" />}
+                title="Performance Optimization"
+                description="Lightning-fast solutions that deliver exceptional user experiences."
+              />
+            </Reveal>
           </div>
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="container px-4 mx-auto">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Wrapify Solutions?</h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                We combine innovation, expertise, and dedication to deliver exceptional results.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Reveal delay={0.1}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
+                  <TrendingUp className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Proven Track Record</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Years of experience delivering successful projects across diverse industries.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
+                  <Shield className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Security First</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Enterprise-grade security and compliance standards to protect your data.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Fast Delivery</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Agile methodology ensures quick turnaround without compromising quality.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#375CA6]/10 to-[#3767A6]/10"></div>
         <div className="container px-4 mx-auto relative z-10">

@@ -8,13 +8,12 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { cn } from "@/lib/utils"
 import { useMobile } from "@/hooks/use-mobile"
+import Image from "next/image"
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
-  { name: "Case Studies", path: "/case-studies" },
   { name: "Contact", path: "/contact" },
 ]
 
@@ -40,10 +39,14 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold">
-              <span className="text-primary">Wrapify</span>
-              <span className="text-gray-900 dark:text-white">Solutions</span>
-            </span>
+            <Image
+              src="/wrapify-logo.png"
+              alt="Wrapify Solutions"
+              width={160}
+              height={50}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">

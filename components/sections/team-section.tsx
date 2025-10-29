@@ -7,7 +7,7 @@ interface TeamMember {
   role: string
   bio: string
   image: string
-  social: {
+  social?: {
     linkedin?: string
     twitter?: string
     github?: string
@@ -16,47 +16,55 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-   {
-  id: 1,
-  name: "Hamza Ejaz",
-  role: "Chief Executive Officer",
-  bio: "As the CEO of Wrapify Solutions, I lead with vision and execution—turning ideas into measurable results. My focus is on driving innovation, empowering teams, and building partnerships that deliver real impact.",
-  image: "/images/ceo.png",
-  social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
-},
-{
-  id: 2,
-  name: "Bilal Hassan",
-  role: "Chief Operational Officer",
-  bio: "As COO, I focus on operational excellence and technological advancement, ensuring seamless project execution and sustainable growth for our clients and company alike.",
-  image: "/images/cto.png",
-  social: { linkedin: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-crop_800_800/B4DZl2pqJnJYAI-/0/1758632257864?e=1762992000&v=beta&t=ydVgD8eVDaUwHVvouwwAgTKfsn_mMWN-wpBrP_62InQ" },
-},
-{
-  id: 3,
-  name: "Wasif Mehmod",
-  role: "AI Team Lead",
-  bio: "Leading the AI division with a focus on research, innovation, and scalable solutions. Passionate about leveraging data and intelligence to build smarter digital ecosystems.",
-  image: "/images/coo.png",
-  social: { linkedin: "https://www.linkedin.com/in/wasifmehmod/" },
-},
-{
-  id: 4,
-  name: "Muhammad Atif Khan",
-  role: "Web Team Lead",
-  bio: "Dedicated to developing high-performance, user-centric web solutions that merge creativity with functionality. I aim to build scalable architectures that empower digital transformation.",
-  image: "/placeholder.svg?height=480&width=360",
-  social: { linkedin: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1762992000&v=beta&t=c7-185a4n0_Sn5qxgneueYE368LAGmrSeM_iaFp0XRA" },
-},
-{
-  id: 5,
-  name: "Misbah Raazaq",
-  role: "UI/UX Designer",
-  bio: "A design enthusiast committed to crafting intuitive and engaging user experiences. I bridge creativity with strategy to design interfaces that are both functional and visually stunning.",
-  image: "/placeholder.svg?height=480&width=360",
-  social: {linkedin: "https://media.licdn.com/dms/image/v2/D5603AQHHiIm1wE-i5g/profile-displayphoto-scale_400_400/B56ZmmgszNJ0Ak-/0/1759435215831?e=1762992000&v=beta&t=PZ0FjXOeEIIZnzdEMSbw3Hac53z0eeHipIBzI7vX6to" },
-}
-
+    id: 1,
+    name: "Hamza Ejaz",
+    role: "Chief Executive Officer",
+    bio: "As the CEO of Wrapify Solutions, I lead with vision and execution—turning ideas into measurable results. My focus is on driving innovation, empowering teams, and building partnerships that deliver real impact.",
+    image: "/images/ceo.png",
+    social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
+  },
+  {
+    id: 2,
+    name: "Bilal Hassan",
+    role: "Chief Operational Officer",
+    bio: "As COO, I focus on operational excellence and technological advancement, ensuring seamless project execution and sustainable growth for our clients and company alike.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_200_200/B4DZl2pqJnJYAY-/0/1758632257955?e=1763596800&v=beta&t=zhDzuyNy14817VjUuqT8njIXi3hqevVsJOC74GU7dsM",
+    social: {
+      linkedin:
+        "https://www.linkedin.com/in/bilal-hassan-783249231/",
+    },
+  },
+  {
+    id: 3,
+    name: "Wasif Mehmod",
+    role: "AI Team Lead",
+    bio: "Leading the AI division with a focus on research, innovation, and scalable solutions. Passionate about leveraging data and intelligence to build smarter digital ecosystems.",
+    image: "/images/coo.png",
+    social: { linkedin: "https://www.linkedin.com/in/wasifmehmod/" },
+  },
+  {
+    id: 4,
+    name: "Muhammad Atif Khan",
+    role: "Web Team Lead",
+    bio: "Dedicated to developing high-performance, user-centric web solutions that merge creativity with functionality. I aim to build scalable architectures that empower digital transformation.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_200_200/B4DZgS81RjHwAY-/0/1752664594165?e=1763596800&v=beta&t=jQLvDycDVufNFbZtS49a8OsEdfOgvPIRlbwQo2aJ9Fw",
+    social: {
+      linkedin:
+        "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
+      
+    },
+  },
+  {
+    id: 5,
+    name: "Misbah Raazaq",
+    role: "UI/UX Designer",
+    bio: "A design enthusiast committed to crafting intuitive and engaging user experiences. I bridge creativity with strategy to design interfaces that are both functional and visually stunning.",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHHiIm1wE-i5g/profile-displayphoto-scale_200_200/B56ZmmgszNJ0Ac-/0/1759435215831?e=1763596800&v=beta&t=Ixmn6uHssAVCOhXK7jPzwVNFzKCynJG4gHies5HX7jQ",
+    social: {
+      linkedin:
+        "https://www.linkedin.com/in/misbah-razzaq-2253002ab/",
+    },
+  },
 ]
 
 interface TeamSectionProps {
@@ -91,7 +99,7 @@ export default function TeamSection({ showAll = true }: TeamSectionProps) {
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex space-x-3 justify-center">
-                      {member.social.linkedin && (
+                      {member.social?.linkedin && (
                         <a
                           href={member.social.linkedin}
                           className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
@@ -102,7 +110,7 @@ export default function TeamSection({ showAll = true }: TeamSectionProps) {
                           <Linkedin className="h-5 w-5 text-white" />
                         </a>
                       )}
-                      {member.social.twitter && (
+                      {member.social?.twitter && (
                         <a
                           href={member.social.twitter}
                           className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"
@@ -113,7 +121,7 @@ export default function TeamSection({ showAll = true }: TeamSectionProps) {
                           <Twitter className="h-5 w-5 text-white" />
                         </a>
                       )}
-                      {member.social.github && (
+                      {member.social?.github && (
                         <a
                           href={member.social.github}
                           className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-primary transition-colors duration-300"

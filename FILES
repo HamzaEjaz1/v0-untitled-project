@@ -87,7 +87,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrapifysolutions_logo-OmmhmiVjA1GRLX2bItS0mwAJSslxNH.jpeg"
+              src="/images/design-mode/wrapifysolutions_logo.jpeg"
               alt="Wrapify Solutions logo"
               className="h-8 w-8 rounded-sm"
             />
@@ -170,7 +170,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrapifysolutions_logo-OmmhmiVjA1GRLX2bItS0mwAJSslxNH.jpeg"
+                src="/images/design-mode/wrapifysolutions_logo.jpeg"
                 alt="Wrapify Solutions logo"
                 className="h-8 w-8 rounded-sm"
               />
