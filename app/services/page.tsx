@@ -4,6 +4,7 @@ import AnimatedText from "@/components/ui/animated-text"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import DetailedServiceCard from "@/components/sections/detailed-service-card"
+import TestimonialSlider from "@/components/sections/testimonial-slider"
 
 export default function ServicesPage() {
   return (
@@ -104,6 +105,24 @@ export default function ServicesPage() {
               />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 relative overflow-hidden bg-gradient-to-b from-transparent to-primary/5">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto mb-12">
+            <Reveal>
+              <p className="text-primary font-medium tracking-wider text-center">CLIENT SUCCESS STORIES</p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mt-4">
+                What Our Clients Say
+              </h2>
+            </Reveal>
+          </div>
+          <Reveal delay={0.2}>
+            <TestimonialSlider />
+          </Reveal>
         </div>
       </section>
 

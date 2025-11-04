@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react"
 
 export default function Footer() {
@@ -9,14 +8,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Image
-              src="/wrapify-logo.png"
-              alt="Wrapify Solutions"
-              width={160}
-              height={50}
-              className="h-12 w-auto mb-6"
-            />
-            <p className="text-gray-300 mb-6">
+            <span className="text-2xl font-bold bg-gradient-to-r from-[#375CA6] to-[#3767A6] bg-clip-text text-transparent">
+              Wrapify Solutions
+            </span>
+            <p className="text-gray-300 mb-6 mt-4">
               We wrap ideas into intelligent digital solutions. Our mission is to deliver transformative digital
               experiences that empower businesses to grow.
             </p>

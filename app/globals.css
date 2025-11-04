@@ -6,8 +6,8 @@
 @layer base {
   /* Light theme using your palette: #010D26, #375CA6, #3767A6, #F2F2F2, #0A0D0B */
   :root {
-    --background: 0 0% 95%; /* #F2F2F2 */
-    --foreground: 150 10% 5%; /* ~#0A0D0B */
+    --background: 0 0% 98%; /* Lighter background */
+    --foreground: 150 10% 5%;
 
     --card: 0 0% 100%;
     --card-foreground: 150 10% 5%;
@@ -15,16 +15,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 150 10% 5%;
 
-    --primary: 219 49% 43%; /* #375CA6 */
+    --primary: 219 62% 47%; /* Brighter primary blue */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 215 49% 43%; /* ~#3767A6 */
+    --secondary: 215 62% 47%; /* Matching secondary */
     --secondary-foreground: 0 0% 98%;
 
     --muted: 220 10% 92%;
     --muted-foreground: 220 8% 35%;
 
-    --accent: 215 49% 43%; /* align accent to secondary by default */
+    --accent: 215 62% 47%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60.2%;
@@ -32,39 +32,39 @@
 
     --border: 220 14% 90%;
     --input: 220 14% 90%;
-    --ring: 219 49% 43%; /* primary */
+    --ring: 219 62% 47%;
     --radius: 0.5rem;
   }
 
   /* Dark theme */
   .dark {
-    --background: 219 95% 7%; /* ~#010D26 */
+    --background: 219 95% 5%; /* Darker dark mode */
     --foreground: 0 0% 95%;
 
-    --card: 220 8% 12%;
+    --card: 220 8% 10%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 8% 12%;
+    --popover: 220 8% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 215 49% 43%; /* ~#3767A6 */
+    --primary: 215 62% 55%; /* Lighter blue for dark mode */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 219 49% 43%; /* #375CA6 */
+    --secondary: 219 62% 55%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 220 10% 18%;
     --muted-foreground: 220 10% 70%;
 
-    --accent: 219 49% 43%;
+    --accent: 219 62% 55%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
 
-    --border: 220 10% 22%;
-    --input: 220 10% 22%;
-    --ring: 215 49% 43%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 215 62% 55%;
   }
 }
 
@@ -93,4 +93,100 @@
 .dark .bg-grid-pattern {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Add animated background patterns */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float-pattern {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-40px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px rgba(55, 92, 166, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 40px rgba(55, 92, 166, 0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-float-pattern {
+  animation: float-pattern 20s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background-size: 1000px 100%;
+}
+
+/* Add image zoom and reveal animations */
+.image-zoom-on-scroll {
+  transition: transform 0.6s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.image-zoom-on-scroll:hover {
+  transform: scale(1.05);
+}
+
+.image-reveal {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.image-reveal img {
+  animation: image-reveal-animation 0.8s ease-out forwards;
+}
+
+@keyframes image-reveal-animation {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
