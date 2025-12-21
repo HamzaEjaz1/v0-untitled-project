@@ -78,7 +78,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Email Address</h3>
-                      <p className="text-gray-600 dark:text-gray-300">business@wrapifysolutions.com</p>
+                      <p className="text-gray-600 dark:text-gray-300">wrapifysolutions@gmail.com</p>
                     </div>
                   </div>
                 </Reveal>

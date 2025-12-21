@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
     name: "Bilal Hassan",
     role: "Chief Operational Officer",
     bio: "As COO, I focus on operational excellence and technological advancement, ensuring seamless project execution and sustainable growth for our clients and company alike.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_200_200/B4DZl2pqJnJYAY-/0/1758632257955?e=1763596800&v=beta&t=zhDzuyNy14817VjUuqT8njIXi3hqevVsJOC74GU7dsM",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjbHIZDc3arw/profile-displayphoto-scale_400_400/B4DZl2pqJnJYAg-/0/1758632257955?e=1767830400&v=beta&t=S-m6E4WItpPqVjkMCO8OE441AIamDBr7uYgKeCov2L8",
     social: {
       linkedin:
         "https://www.linkedin.com/in/bilal-hassan-783249231/",
@@ -47,7 +47,7 @@ const teamMembers: TeamMember[] = [
     name: "Muhammad Atif Khan",
     role: "Web Team Lead",
     bio: "Dedicated to developing high-performance, user-centric web solutions that merge creativity with functionality. I aim to build scalable architectures that empower digital transformation.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_200_200/B4DZgS81RjHwAY-/0/1752664594165?e=1763596800&v=beta&t=jQLvDycDVufNFbZtS49a8OsEdfOgvPIRlbwQo2aJ9Fw",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEbntOxJ67qLg/profile-displayphoto-scale_400_400/B4DZgS81RjHwAg-/0/1752664594165?e=1767830400&v=beta&t=SaTrp6TANwtkFQYuYHekhYUpoGufs4qwUNPC2KeCNYw",
     social: {
       linkedin:
         "https://www.linkedin.com/in/muhammad-atif-khan-183217319/",
@@ -59,7 +59,7 @@ const teamMembers: TeamMember[] = [
     name: "Misbah Raazaq",
     role: "UI/UX Designer",
     bio: "A design enthusiast committed to crafting intuitive and engaging user experiences. I bridge creativity with strategy to design interfaces that are both functional and visually stunning.",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQHHiIm1wE-i5g/profile-displayphoto-scale_200_200/B56ZmmgszNJ0Ac-/0/1759435215831?e=1763596800&v=beta&t=Ixmn6uHssAVCOhXK7jPzwVNFzKCynJG4gHies5HX7jQ",
+    image: "https://media.licdn.com/dms/image/v2/D4E35AQHKGTWqcxs8fw/profile-framedphoto-shrink_400_400/B4EZpdB.DOHoAc-/0/1762497389036?e=1766926800&v=beta&t=_CKxtveS-Cam3237j1o5RqHTp6c8CV8G6DVv0ImSGgs",
     social: {
       linkedin:
         "https://www.linkedin.com/in/misbah-razzaq-2253002ab/",
