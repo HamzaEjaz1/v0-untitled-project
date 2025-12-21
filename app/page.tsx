@@ -10,9 +10,13 @@ import AustralianTestimonials from "@/components/sections/australian-testimonial
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
-      {/* Hero Section with animated background */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
+
+        {/* Enhanced floating blobs */}
+        <div className="decorative-blob decorative-blob-1"></div>
+        <div className="decorative-blob decorative-blob-2"></div>
+
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-[#375CA6]/20 to-[#3767A6]/10 rounded-full blur-3xl animate-float-pattern"></div>
         <div
           className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-br from-[#3767A6]/15 to-[#375CA6]/5 rounded-full blur-3xl animate-float-pattern"
@@ -23,30 +27,43 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 space-y-6">
               <Reveal>
-                <p className="text-primary font-medium tracking-wider">WELCOME TO WRAPIFY SOLUTIONS</p>
+                <p className="text-primary font-medium tracking-wider animate-slide-in-left">
+                  WELCOME TO WRAPIFY SOLUTIONS
+                </p>
               </Reveal>
               <Reveal delay={0.1}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                   We Wrap Ideas into <br />
-                  <AnimatedText text="Intelligent Digital Solutions" />
+                  <span className="gradient-text-animate">
+                    <AnimatedText text="Intelligent Digital Solutions" />
+                  </span>
                 </h1>
               </Reveal>
               <Reveal delay={0.2}>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl">
+                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl animate-slide-in-left">
                   Welcome to Wrapify Solutions, where creativity meets technology to deliver transformative digital
                   experiences. We specialize in turning complex challenges into seamless, user-friendly, and scalable
-                  solutions.
+                  solutions that drive real business growth.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground btn-glow animate-glow-pulse"
+                    asChild
+                  >
                     <Link href="/services">
                       Explore Services
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="hover:scale-105 transition-transform bg-transparent"
+                    asChild
+                  >
                     <Link href="/contact">Contact Us</Link>
                   </Button>
                 </div>
@@ -54,13 +71,14 @@ export default function Home() {
             </div>
             <div className="flex-1 relative">
               <Reveal direction="right">
-                <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#375CA6]/20 to-[#3767A6]/20 z-10"></div>
+                <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer animate-scale-in">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#375CA6]/20 to-[#3767A6]/20 z-10 group-hover:opacity-0 transition-opacity duration-500"></div>
                   <img
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                     alt="Digital Solutions"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20"></div>
                 </div>
               </Reveal>
             </div>
@@ -78,7 +96,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-20 relative overflow-hidden">
         <div
           className="absolute top-32 left-0 w-96 h-96 bg-gradient-to-br from-[#375CA6]/10 to-transparent rounded-full blur-3xl opacity-50 animate-float-pattern"
@@ -88,8 +105,8 @@ export default function Home() {
         <div className="container px-4 mx-auto relative z-10">
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text-animate">Our Services</h2>
+              <p className="text-gray-600 dark:text-gray-300 text-lg">
                 We offer comprehensive digital solutions to help businesses thrive in the modern digital landscape.
               </p>
             </div>
@@ -97,95 +114,116 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Reveal delay={0.1}>
-              <ServiceCard
-                icon={<Code className="h-8 w-8 text-primary" />}
-                title="Web Development"
-                description="Scalable, high-performance websites tailored to your brand and business needs."
-              />
+              <div className="card-hover-lift">
+                <ServiceCard
+                  icon={<Code className="h-8 w-8 text-primary" />}
+                  title="Web Development"
+                  description="Scalable, high-performance websites tailored to your brand and business needs with cutting-edge technologies."
+                />
+              </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <ServiceCard
-                icon={<Smartphone className="h-8 w-8 text-primary" />}
-                title="App Development"
-                description="Intuitive mobile and desktop applications designed for impact and usability."
-              />
+              <div className="card-hover-lift">
+                <ServiceCard
+                  icon={<Smartphone className="h-8 w-8 text-primary" />}
+                  title="App Development"
+                  description="Intuitive mobile and desktop applications designed for maximum impact, usability, and user engagement."
+                />
+              </div>
             </Reveal>
             <Reveal delay={0.3}>
-              <ServiceCard
-                icon={<Bot className="h-8 w-8 text-primary" />}
-                title="AI Agents"
-                description="Smart, autonomous systems to streamline processes and decision-making."
-              />
+              <div className="card-hover-lift">
+                <ServiceCard
+                  icon={<Bot className="h-8 w-8 text-primary" />}
+                  title="AI Agents"
+                  description="Smart, autonomous AI systems to streamline processes, enhance decision-making, and drive efficiency."
+                />
+              </div>
             </Reveal>
             <Reveal delay={0.4}>
-              <ServiceCard
-                icon={<MessageSquare className="h-8 w-8 text-primary" />}
-                title="Chatbot Development"
-                description="Intelligent chatbots to enhance customer engagement and automate support."
-              />
+              <div className="card-hover-lift">
+                <ServiceCard
+                  icon={<MessageSquare className="h-8 w-8 text-primary" />}
+                  title="Chatbot Development"
+                  description="Intelligent conversational AI to enhance customer engagement, automate support, and boost satisfaction."
+                />
+              </div>
             </Reveal>
             <Reveal delay={0.5}>
-              <ServiceCard
-                icon={<Palette className="h-8 w-8 text-primary" />}
-                title="UI/UX Designing"
-                description="Human-centered designs that blend functionality with stunning visuals."
-              />
+              <div className="card-hover-lift">
+                <ServiceCard
+                  icon={<Palette className="h-8 w-8 text-primary" />}
+                  title="UI/UX Designing"
+                  description="Human-centered designs that blend functionality with stunning visuals to create memorable experiences."
+                />
+              </div>
             </Reveal>
             <Reveal delay={0.6}>
-              <ServiceCard
-                icon={<Zap className="h-8 w-8 text-primary" />}
-                title="Performance Optimization"
-                description="Lightning-fast solutions that deliver exceptional user experiences."
-              />
+              <div className="card-hover-lift">
+                <ServiceCard
+                  icon={<Zap className="h-8 w-8 text-primary" />}
+                  title="Performance Optimization"
+                  description="Lightning-fast solutions engineered to deliver exceptional user experiences and maximum engagement."
+                />
+              </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
         <div className="container px-4 mx-auto relative z-10">
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Wrapify Solutions?</h2>
-              <p className="text-gray-600 dark:text-gray-300">
-                We combine innovation, expertise, and dedication to deliver exceptional results.
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text-animate">
+                Why Choose Wrapify Solutions?
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 text-lg">
+                We combine innovation, expertise, and dedication to deliver exceptional results that exceed
+                expectations.
               </p>
             </div>
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Reveal delay={0.1}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer">
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                  <TrendingUp className="h-6 w-6 text-primary" />
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 group cursor-pointer card-hover-lift border border-transparent hover:border-primary/20">
+                <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 mb-6 group-hover:scale-110 transition-transform animate-bounce-subtle">
+                  <TrendingUp className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Proven Track Record</h3>
+                <h3 className="text-xl font-bold mb-3">Proven Track Record</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Years of experience delivering successful projects across diverse industries.
+                  Years of experience delivering successful projects across diverse industries with measurable results.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer">
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Shield className="h-6 w-6 text-primary" />
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 group cursor-pointer card-hover-lift border border-transparent hover:border-primary/20">
+                <div
+                  className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 mb-6 group-hover:scale-110 transition-transform animate-bounce-subtle"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  <Shield className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Security First</h3>
+                <h3 className="text-xl font-bold mb-3">Security First</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Enterprise-grade security and compliance standards to protect your data.
+                  Enterprise-grade security and compliance standards to protect your data and maintain user trust.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer">
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Zap className="h-6 w-6 text-primary" />
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 group cursor-pointer card-hover-lift border border-transparent hover:border-primary/20">
+                <div
+                  className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 mb-6 group-hover:scale-110 transition-transform animate-bounce-subtle"
+                  style={{ animationDelay: "1s" }}
+                >
+                  <Zap className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Fast Delivery</h3>
+                <h3 className="text-xl font-bold mb-3">Fast Delivery</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Agile methodology ensures quick turnaround without compromising quality.
+                  Agile methodology ensures quick turnaround times without compromising on quality or attention to
+                  detail.
                 </p>
               </div>
             </Reveal>
@@ -193,6 +231,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
         <div
@@ -205,27 +244,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#375CA6]/10 to-[#3767A6]/10"></div>
         <div
           className="absolute right-0 top-1/2 w-96 h-96 bg-gradient-to-br from-[#3767A6]/20 to-transparent rounded-full blur-3xl animate-pulse-glow"
           style={{ marginTop: "-192px" }}
         ></div>
+        <div className="absolute left-0 top-1/4 w-80 h-80 bg-gradient-to-br from-[#375CA6]/15 to-transparent rounded-full blur-3xl animate-float-pattern"></div>
 
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Wrap Your Ideas into Reality?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text-animate">
+                Ready to Wrap Your Ideas into Reality?
+              </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
                 Partner with Wrapify Solutions to create digital experiences that wrap innovation, design, and
-                intelligence into one solution.
+                intelligence into one transformative solution. Let's build something extraordinary together.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground btn-glow animate-glow-pulse hover:scale-110 transition-transform"
+                asChild
+              >
                 <Link href="/contact">
                   Let's Build Together
                   <ArrowRight className="ml-2 h-4 w-4" />

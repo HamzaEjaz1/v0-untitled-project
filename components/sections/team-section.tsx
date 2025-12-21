@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
     name: "Hamza Ejaz",
     role: "Chief Executive Officer",
     bio: "As the CEO of Wrapify Solutions, I lead with vision and execution—turning ideas into measurable results. My focus is on driving innovation, empowering teams, and building partnerships that deliver real impact.",
-    image: "/images/ceo.png",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHIc4EcATyTWg/profile-displayphoto-scale_400_400/B56ZsoTGMGGsAk-/0/1765907654587?e=1767830400&v=beta&t=xd0ZHof4GltV_ioqnpkIrs7mq80ClIPfSmZ3fsO8t-U",
     social: { linkedin: "https://www.linkedin.com/in/hamzaejaz-" },
   },
   {

@@ -114,7 +114,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-primary mr-3 mt-1" />
-                <span className="text-gray-300">business@wrapifysolutions.com</span>
+                <span className="text-gray-300">wrapifysolutions@gmail.com</span>
               </li>
             </ul>
           </div>

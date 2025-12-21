@@ -36,9 +36,11 @@ export const metadata = {
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: "/wrapifysolutions_logo.jpeg",
-    shortcut: "/wrapifysolutions_logo.jpeg",
-    apple: "/wrapifysolutions_logo.jpeg",
+    icon: "https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo?e=1767830400&v=beta&t=SXmzK204CMHrvUVzs9-L8GPd2hOHQH4PzSfT1MDF9yc",
+    shortcut:
+      "https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo?e=1767830400&v=beta&t=SXmzK204CMHrvUVzs9-L8GPd2hOHQH4PzSfT1MDF9yc",
+    apple:
+      "https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo?e=1767830400&v=beta&t=SXmzK204CMHrvUVzs9-L8GPd2hOHQH4PzSfT1MDF9yc",
   },
     generator: 'v0.app'
 }
@@ -52,18 +54,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="icon"
+          href="https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo?e=1767830400&v=beta&t=SXmzK204CMHrvUVzs9-L8GPd2hOHQH4PzSfT1MDF9yc"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo?e=1767830400&v=beta&t=SXmzK204CMHrvUVzs9-L8GPd2hOHQH4PzSfT1MDF9yc"
+        />
         <meta name="theme-color" content="#0b132b" />
         <meta name="robots" content="index, follow" />
-        <meta
-          name="google-site-verification"
-          content="YOUR_GOOGLE_VERIFICATION_CODE_HERE"
-        />
-        <meta
-          property="og:title"
-          content="Wrapify Solutions | Web, SaaS & AI Automation Experts"
-        />
+        <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
+        <meta property="og:title" content="Wrapify Solutions | Web, SaaS & AI Automation Experts" />
         <meta
           property="og:description"
           content="Wrapify Solutions provides innovative AI, SaaS, and Web Development services to help your business grow through automation and technology."
@@ -72,10 +74,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://wrapifysolutions.com" />
         <meta property="og:image" content="/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Wrapify Solutions | AI Automation & Web Development Company"
-        />
+        <meta name="twitter:title" content="Wrapify Solutions | AI Automation & Web Development Company" />
         <meta
           name="twitter:description"
           content="Empowering startups and enterprises with AI-driven digital solutions, SaaS platforms, and web automation."
@@ -83,12 +82,7 @@ export default function RootLayout({
         <meta name="twitter:image" content="/og-image.jpg" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">{children}</main>
