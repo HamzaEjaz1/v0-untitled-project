@@ -27,146 +27,172 @@ const blogPosts: BlogPost[] = [
     title: "Web Development Best Practices in 2025: Creating High-Performance Websites for USA Markets",
     slug: "web-development-best-practices-usa",
     excerpt:
-      "Discover the latest web development trends and best practices to build fast, responsive websites that rank well in search engines and convert visitors into customers.",
+      "Discover the latest web development trends and best practices to build fast, responsive websites that rank well in search engines and convert visitors into customers. Wrapify Solutions provides expert web development services across the USA.",
     content:
-      "Web development has evolved significantly. Modern websites need to be lightning-fast, mobile-responsive, and SEO-optimized. We explore the latest technologies like Next.js, React, and cloud deployment strategies that help businesses in the USA achieve better online visibility.",
+      "Web development has evolved significantly. Modern websites need to be lightning-fast, mobile-responsive, and SEO-optimized. We explore the latest technologies like Next.js, React, and cloud deployment strategies that help businesses in the USA achieve better online visibility and user engagement.",
     category: "Web Development",
     author: "Wrapify Solutions Team",
     date: "2025-01-04",
     readTime: "8 min read",
     image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&blend=https://images.unsplash.com/photo-1667372393119-3160402511de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&blend-mode=multiply",
-    keywords: ["web development USA", "responsive web design", "web performance", "SEO optimization"],
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    keywords: [
+      "web development USA",
+      "responsive web design",
+      "web performance optimization",
+      "SEO-friendly websites",
+      "USA web development company",
+    ],
     location: "USA",
   },
   {
     id: "2",
-    title: "Mobile App Development Guide: Building iOS & Android Apps for the Middle East Market (Qatar)",
+    title: "Mobile App Development Guide: Building iOS & Android Apps for Qatar and Middle East Markets",
     slug: "mobile-app-development-qatar",
     excerpt:
-      "Learn how to develop successful mobile applications for the Qatar and Middle East market. We cover native and cross-platform development, localization, and user engagement strategies.",
+      "Learn how to develop successful mobile applications for Qatar and the Middle East market. Wrapify Solutions specializes in native iOS, Android, and cross-platform app development for businesses in Qatar.",
     content:
-      "Mobile app development in Qatar requires understanding local user preferences and market dynamics. This guide covers iOS and Android development, testing strategies, and how to ensure your app meets international standards while serving regional audiences effectively.",
+      "Mobile app development in Qatar requires understanding local user preferences and market dynamics. This guide covers iOS and Android development, localization for Arabic-speaking users, local payment integration, and compliance with Qatar's regulations for successful app launches.",
     category: "App Development",
     author: "Wrapify Solutions Team",
     date: "2025-01-03",
     readTime: "10 min read",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSulieNelCE-4vVUdJEkKqzaB1ozfaiBVD2cg&s",
-    keywords: ["app development Qatar", "mobile app development", "iOS development", "Android app", "app localization"],
+      "https://images.unsplash.com/photo-1512941691920-25bda36dc643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    keywords: [
+      "app development Qatar",
+      "mobile app development",
+      "iOS development Qatar",
+      "Android app development",
+      "Middle East app development",
+    ],
     location: "Qatar",
   },
   {
     id: "3",
-    title: "AI Agents Revolution: Automating Business Processes Across USA and Qatar",
-    slug: "ai-agents-business-automation",
+    title: "AI Agents and Automation: Transforming Business Operations in USA and Qatar",
+    slug: "ai-agents-automation-usa-qatar",
     excerpt:
-      "Explore how AI agents are transforming business operations. From customer service to data analysis, discover how intelligent agents drive efficiency and growth.",
+      "Explore how AI agents are revolutionizing business automation across USA and Qatar. Discover intelligent automation solutions that streamline operations, reduce costs, and improve customer experience.",
     content:
-      "AI agents represent the next frontier in business automation. These intelligent systems can handle complex tasks, learn from data, and make autonomous decisions. Discover how companies across USA and Qatar are leveraging AI agents to streamline operations, reduce costs, and improve customer experiences.",
+      "AI agents represent the next frontier in business automation. These intelligent systems can handle complex tasks, automate repetitive processes, and make autonomous decisions. Discover how companies across USA and Qatar are leveraging AI agents for process automation, customer service, and data analysis.",
     category: "AI & Automation",
     author: "Wrapify Solutions Team",
     date: "2025-01-02",
     readTime: "9 min read",
     image:
-      "data:image/jpeg;base64,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",
-    keywords: ["AI agents", "business automation", "AI automation USA", "intelligent automation", "process automation"],
+      "https://images.unsplash.com/photo-1677442d019cecc7d45f48eea7ef3dbbf89abf5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    keywords: [
+      "AI agents",
+      "business automation",
+      "AI automation USA Qatar",
+      "intelligent automation",
+      "process automation",
+    ],
     location: "USA & Qatar",
   },
   {
     id: "4",
-    title: "Chatbot Development: Creating Intelligent Customer Service Solutions",
-    slug: "chatbot-development-guide",
+    title: "Chatbot Development for Customer Service Excellence in Saudi Arabia",
+    slug: "chatbot-development-saudi-arabia",
     excerpt:
-      "Master chatbot development for improved customer engagement. Learn about NLP, conversation design, and deploying chatbots across multiple platforms.",
+      "Master chatbot development and AI-powered customer service solutions tailored for Saudi Arabia. Wrapify Solutions builds intelligent chatbots that enhance customer engagement and reduce support costs.",
     content:
-      "Modern chatbots powered by advanced NLP can understand customer intent and provide meaningful responses. This guide covers everything from chatbot architecture to deployment strategies, helping you build chatbots that enhance customer satisfaction and reduce support costs.",
+      "Modern chatbots powered by advanced NLP can understand customer intent in Arabic and English, providing meaningful responses. This guide covers chatbot architecture, conversation design, and deployment strategies for businesses in Saudi Arabia seeking to improve customer satisfaction.",
     category: "Chatbot Development",
     author: "Wrapify Solutions Team",
     date: "2025-01-01",
     readTime: "7 min read",
-    image: "data:image/png;base64,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",
+    image:
+      "https://images.unsplash.com/photo-1677946127149-b3e325df5f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     keywords: [
-      "chatbot development",
-      "conversational AI",
-      "customer service chatbot",
-      "NLP chatbot",
-      "AI customer support",
+      "chatbot development Saudi Arabia",
+      "AI chatbot",
+      "customer service automation",
+      "conversational AI Saudi Arabia",
     ],
+    location: "Saudi Arabia",
   },
   {
     id: "5",
-    title: "UI/UX Design Trends 2025: Building Beautiful Digital Experiences",
-    slug: "ui-ux-design-trends-2025",
+    title: "Software Development Services in Pakistan: Building Digital Solutions for Growth",
+    slug: "software-development-pakistan",
     excerpt:
-      "Discover the latest UI/UX design trends that create engaging user experiences. From dark mode design to micro-interactions, explore modern design principles.",
+      "Discover custom software development services for Pakistani businesses. Wrapify Solutions delivers web development, app development, and digital transformation solutions for startups and enterprises.",
     content:
-      "User experience is paramount in digital products. Modern design trends emphasize minimalism, accessibility, and emotional connection. Learn about the latest design tools, frameworks, and methodologies that create interfaces users love.",
-    category: "UI/UX Design",
+      "Pakistan's tech industry is booming, and businesses need reliable software development partners. Wrapify Solutions provides comprehensive software development services including web applications, mobile apps, AI solutions, and digital transformation consulting tailored to Pakistan's growing digital economy.",
+    category: "Software Development",
     author: "Wrapify Solutions Team",
     date: "2024-12-31",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    keywords: ["UI UX design", "design trends 2025", "user experience design", "interface design", "modern web design"],
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    keywords: [
+      "software development Pakistan",
+      "web development Pakistan",
+      "app development Pakistan",
+      "IT services Pakistan",
+      "custom software Pakistan",
+    ],
+    location: "Pakistan",
   },
   {
     id: "6",
-    title: "Software Development for Startups: Building MVP in Record Time",
-    slug: "software-development-startups",
+    title: "UI/UX Design Excellence: Creating Beautiful Digital Experiences Globally",
+    slug: "ui-ux-design-trends-2025",
     excerpt:
-      "Accelerate your startup growth with efficient software development strategies. Learn how to build MVPs quickly and scale as your business grows.",
+      "Discover cutting-edge UI/UX design trends that create engaging user experiences worldwide. Wrapify Solutions specializes in user-centered design for web and mobile applications across all markets.",
     content:
-      "Startups need to move fast. This guide covers agile development methodologies, MVP development strategies, and how to build scalable software architecture that supports growth. We explore case studies of successful startup transformations.",
-    category: "Software Development",
+      "User experience is paramount in digital products. Modern design trends emphasize minimalism, accessibility, and emotional connection. Learn about the latest design tools, frameworks, and methodologies that work across different markets and cultures globally.",
+    category: "UI/UX Design",
     author: "Wrapify Solutions Team",
     date: "2024-12-30",
-    readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    keywords: [
-      "startup software development",
-      "MVP development",
-      "agile development",
-      "scalable software",
-      "startup tech",
-    ],
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    keywords: ["UI UX design", "design trends 2025", "user experience design", "interface design", "digital design"],
   },
   {
     id: "7",
-    title: "Digital Transformation in USA: How Businesses Are Going Digital",
-    slug: "digital-transformation-usa",
+    title: "Digital Transformation Services: Modernizing Business Operations in USA",
+    slug: "digital-transformation-usa-enterprise",
     excerpt:
-      "Understand the digital transformation journey. From legacy systems to cloud-based solutions, learn how USA businesses are modernizing operations.",
+      "Learn how digital transformation is revolutionizing businesses in the USA. Wrapify Solutions provides enterprise digital transformation consulting and implementation services.",
     content:
-      "Digital transformation is essential for business survival. Companies across USA are migrating to cloud, implementing AI, and adopting modern development practices. Discover the strategies that drive successful digital transformations.",
+      "Digital transformation is essential for business survival. Companies across USA are migrating to cloud infrastructure, implementing AI solutions, and adopting modern development practices. Discover the strategies that drive successful digital transformations for enterprises.",
     category: "Digital Transformation",
     author: "Wrapify Solutions Team",
     date: "2024-12-29",
     readTime: "8 min read",
-    image:
-      "data:image/jpeg;base64,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",
-    keywords: ["digital transformation USA", "cloud migration", "digital business", "technology transformation"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    keywords: [
+      "digital transformation USA",
+      "cloud migration",
+      "enterprise digital transformation",
+      "technology modernization",
+      "business digital solutions",
+    ],
     location: "USA",
   },
   {
     id: "8",
-    title: "Software Development Services in Qatar: Trusted Partner for Enterprise Solutions",
-    slug: "software-development-qatar",
+    title: "E-Commerce Website Development for Businesses in Middle East and Beyond",
+    slug: "ecommerce-website-development",
     excerpt:
-      "Explore how Wrapify Solutions provides enterprise-grade software development services tailored for Qatar's business landscape.",
+      "Build powerful e-commerce websites with Wrapify Solutions. Expert e-commerce development for businesses in Qatar, Saudi Arabia, UAE, and beyond with secure payments and localization.",
     content:
-      "Qatar's business sector requires reliable, scalable software solutions. We provide custom software development, cloud services, and digital transformation consulting tailored to Qatar's unique business environment and regulatory requirements.",
-    category: "Software Development",
+      "E-commerce is transforming retail across the Middle East. Successful online stores require secure payment processing, fast performance, mobile optimization, and localization. Discover how to build e-commerce platforms that convert visitors into customers across multiple markets.",
+    category: "Web Development",
     author: "Wrapify Solutions Team",
     date: "2024-12-28",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    readTime: "9 min read",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-adf4e40db15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     keywords: [
-      "software development Qatar",
-      "enterprise solutions Qatar",
-      "custom software development",
-      "Qatar tech services",
+      "e-commerce development",
+      "online store development",
+      "e-commerce website",
+      "payment gateway integration",
+      "e-commerce solutions Middle East",
     ],
-    location: "Qatar",
   },
 ]
 
@@ -207,7 +233,7 @@ function BlogContent() {
             <Reveal delay={0.2}>
               <p className="text-lg text-gray-600 dark:text-gray-300">
                 Expert insights on web development, app development, AI automation, and digital transformation for USA
-                and Qatar markets.
+                and Middle East markets.
               </p>
             </Reveal>
           </div>
