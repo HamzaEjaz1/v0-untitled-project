@@ -23,6 +23,8 @@ const navItems = [
       { name: "UI/UX Design", path: "/services/ui-ux-design" },
     ],
   },
+  { name: "Use Cases", path: "/use-cases" },
+  { name: "Blog", path: "/blog" },
   { name: "How We Empower", path: "/empower-business" },
   { name: "Contact", path: "/contact" },
 ]

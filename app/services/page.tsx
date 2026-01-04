@@ -1,10 +1,18 @@
-import { Code, Smartphone, Bot, MessageSquare, Palette } from "lucide-react"
+import { Code, Smartphone, Bot, MessageSquare, Palette, Zap } from "lucide-react"
 import { Reveal } from "@/components/ui/reveal"
 import AnimatedText from "@/components/ui/animated-text"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import DetailedServiceCard from "@/components/sections/detailed-service-card"
 import TestimonialSlider from "@/components/sections/testimonial-slider"
+
+export const metadata = {
+  title: "Professional Web Development, App Development & AI Services in USA and Qatar | Wrapify Solutions",
+  description:
+    "Discover Wrapify Solutions' comprehensive web development, app development, AI automation, and chatbot development services. Serving businesses in USA and Qatar with custom software solutions, digital transformation, and intelligent automation.",
+  keywords:
+    "web development services, app development company, AI automation services, chatbot development, software development USA, software development Qatar, custom web development, mobile app development, digital solutions, business automation",
+}
 
 export default function ServicesPage() {
   return (
@@ -33,74 +41,104 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <div className="container px-4 mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            Professional Software Development Services for USA & Qatar
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Reveal>
               <DetailedServiceCard
                 icon={<Code className="h-10 w-10 text-primary" />}
-                title="Web Development"
-                description="Scalable, high-performance websites tailored to your brand and business needs."
+                title="Web Development Services"
+                description="Custom, scalable web applications built with modern technologies. From startups to enterprises, we deliver high-performance websites and web platforms."
                 features={[
-                  "Responsive web design",
-                  "Progressive web applications",
-                  "E-commerce solutions",
-                  "Content management systems",
-                  "Custom web portals",
+                  "Responsive Web Design & Development",
+                  "Progressive Web Applications (PWA)",
+                  "E-commerce Solutions & Online Stores",
+                  "Content Management Systems (CMS)",
+                  "SaaS Platform Development",
+                  "API Development & Integration",
+                  "SEO-Optimized Web Solutions",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.1}>
               <DetailedServiceCard
                 icon={<Smartphone className="h-10 w-10 text-primary" />}
-                title="App Development"
-                description="Intuitive mobile and desktop applications designed for impact and usability."
+                title="Mobile App Development"
+                description="Native and cross-platform mobile applications for iOS and Android. Build user-friendly apps that deliver exceptional performance and user engagement."
                 features={[
-                  "Native iOS and Android apps",
-                  "Cross-platform development",
-                  "Desktop applications",
-                  "App store optimization",
-                  "Maintenance and updates",
+                  "Native iOS App Development",
+                  "Native Android App Development",
+                  "Cross-Platform Mobile Development",
+                  "App Store Optimization & Launch",
+                  "Mobile App Maintenance & Support",
+                  "Real-time Synchronization",
+                  "Offline-First Mobile Solutions",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.2}>
               <DetailedServiceCard
                 icon={<Bot className="h-10 w-10 text-primary" />}
-                title="AI Agents"
-                description="Smart, autonomous systems to streamline processes and decision-making."
+                title="AI Agents & Automation"
+                description="Intelligent AI agents for process automation, decision-making, and business optimization. Harness the power of artificial intelligence to transform your operations."
                 features={[
-                  "Process automation",
-                  "Intelligent decision systems",
-                  "Data analysis and insights",
-                  "Predictive analytics",
-                  "Custom AI solutions",
+                  "Intelligent Process Automation",
+                  "AI-Powered Decision Systems",
+                  "Predictive Analytics & Insights",
+                  "Data Analysis & Reporting",
+                  "Custom AI Model Development",
+                  "Machine Learning Solutions",
+                  "Business Intelligence Tools",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.3}>
               <DetailedServiceCard
                 icon={<MessageSquare className="h-10 w-10 text-primary" />}
-                title="Chatbot Development"
-                description="Intelligent chatbots to enhance customer engagement and automate support."
+                title="Chatbot & AI Automation"
+                description="Advanced conversational AI and chatbots for customer service automation. Available 24/7 to handle inquiries, support tickets, and engage customers intelligently."
                 features={[
-                  "Customer service automation",
-                  "AI-powered virtual assistants",
-                  "Multi-platform integration",
-                  "Natural language processing",
-                  "24/7 customer support",
+                  "AI Chatbot Development",
+                  "Customer Service Automation",
+                  "Multi-Channel Integration",
+                  "Natural Language Processing (NLP)",
+                  "Conversational AI Training",
+                  "FAQ Automation",
+                  "Lead Generation Chatbots",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.4}>
               <DetailedServiceCard
                 icon={<Palette className="h-10 w-10 text-primary" />}
-                title="UI/UX Designing"
-                description="Human-centered designs that blend functionality with stunning visuals."
+                title="UI/UX Design Services"
+                description="Human-centered design approach creating intuitive, beautiful interfaces. Every pixel is crafted to enhance user experience and achieve business goals."
                 features={[
-                  "User experience research",
-                  "Interface design",
-                  "Prototyping and wireframing",
-                  "Design systems",
-                  "Usability testing",
+                  "User Research & Analysis",
+                  "Wireframing & Prototyping",
+                  "Interface Design (UI)",
+                  "User Experience Design (UX)",
+                  "Design Systems & Brand Guidelines",
+                  "Accessibility & Usability Testing",
+                  "Interactive Prototypes",
+                ]}
+              />
+            </Reveal>
+            <Reveal delay={0.5}>
+              <DetailedServiceCard
+                icon={<Zap className="h-10 w-10 text-primary" />}
+                title="Digital Transformation Solutions"
+                description="End-to-end digital transformation services to modernize your business. Integrate AI, automation, and cloud technologies for competitive advantage."
+                features={[
+                  "Legacy System Modernization",
+                  "Cloud Migration Services",
+                  "Digital Process Optimization",
+                  "Technology Stack Assessment",
+                  "Enterprise Integration",
+                  "Scalability Architecture",
+                  "Security & Compliance",
                 ]}
               />
             </Reveal>

@@ -52,6 +52,16 @@ export default function AboutPage() {
                 </p>
               </div>
             </Reveal>
+            <Reveal delay={0.3}>
+              <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Our Scope & Reach</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  While headquartered in Pakistan, Wrapify Solutions proudly serves businesses across the USA and Qatar.
+                  We combine global expertise with deep understanding of local markets, delivering software solutions
+                  that resonate with your audience and drive measurable business results.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

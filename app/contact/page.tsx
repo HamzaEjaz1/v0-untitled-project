@@ -55,8 +55,9 @@ export default function ContactPage() {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-1">Our Location</h3>
-                      <p className="text-gray-600 dark:text-gray-300">Islamabad, Pakistan</p>
+                      <h3 className="text-lg font-semibold mb-1">Headquarters (Pakistan)</h3>
+                      <p className="text-gray-600 dark:text-gray-300">Islamabad, G-6 Sector, Pakistan</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Serving USA & Qatar Markets</p>
                     </div>
                   </div>
                 </Reveal>
@@ -66,8 +67,11 @@ export default function ContactPage() {
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-1">Phone Number</h3>
+                      <h3 className="text-lg font-semibold mb-1">Phone</h3>
                       <p className="text-gray-600 dark:text-gray-300">+92 343 9024736</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        Available for USA & Qatar inquiries
+                      </p>
                     </div>
                   </div>
                 </Reveal>
@@ -77,8 +81,9 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-1">Email Address</h3>
+                      <h3 className="text-lg font-semibold mb-1">Email</h3>
                       <p className="text-gray-600 dark:text-gray-300">wrapifysolutions@gmail.com</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Quick response within 24 hours</p>
                     </div>
                   </div>
                 </Reveal>
@@ -87,9 +92,12 @@ export default function ContactPage() {
                 <div className="mt-12">
                   <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
                   <div className="space-y-2 text-gray-600 dark:text-gray-300">
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM (PKT)</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM (PKT)</p>
+                    <p>Sunday: Available for emergencies</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                      Remote support available for USA & Qatar timezones
+                    </p>
                   </div>
                 </div>
               </Reveal>

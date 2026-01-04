@@ -8,13 +8,14 @@ import Footer from "@/components/layout/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Wrapify Solutions | AI Automation, Web & SaaS Development Company",
+  title: "Wrapify Solutions | Web & App Development, AI Automation Company in USA & Qatar",
   description:
-    "Wrapify Solutions is a leading AI & Web Development company specializing in SaaS platforms, business automation, and custom software solutions. We empower startups and enterprises with cutting-edge technology, modern UI/UX design, and scalable digital solutions.",
+    "Leading web development, app development, AI agents, chatbot development, and UI/UX design company serving USA and Qatar. Expert software solutions for startups and enterprises. Get AI automation, custom software, and digital transformation services.",
   keywords:
-    "AI Automation, Web Development Company, SaaS Development, Software Development, App Development, Custom Software Solutions, AI Solutions, Business Automation, Chatbot Development, React Developer, Next.js Developer, Mobile App Development, Full Stack Development, UI UX Design, Graphic Design, Machine Learning Solutions, AI Company in Australia, Web Developer in UK, SaaS Agency USA, Software House Dubai, Digital Transformation Services, AI Automation Agency, AI Chatbot Company, AI Developers, App Developers Near Me",
+    "web development USA, app development USA, AI automation USA, software development company USA, chatbot development USA, custom software solutions, web development Qatar, app development Qatar, AI agents, digital transformation, SaaS development, responsive web design, mobile app development, AI chatbot, business automation, web design services, software house, development agency",
+  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   openGraph: {
-    title: "Wrapify Solutions | AI Automation, Web & SaaS Development Experts",
+    title: "Wrapify Solutions | Web Development & AI Automation",
     description:
       "We wrap your ideas into intelligent digital solutions. Wrapify Solutions builds modern web, mobile, and AI-driven applications for global businesses.",
     url: "https://wrapifysolutions.com",
@@ -63,7 +64,7 @@ export default function RootLayout({
           href="https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo?e=1767830400&v=beta&t=SXmzK204CMHrvUVzs9-L8GPd2hOHQH4PzSfT1MDF9yc"
         />
         <meta name="theme-color" content="#0b132b" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
         <meta property="og:title" content="Wrapify Solutions | Web, SaaS & AI Automation Experts" />
         <meta

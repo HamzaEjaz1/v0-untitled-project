@@ -28,22 +28,23 @@ export default function Home() {
             <div className="flex-1 space-y-6">
               <Reveal>
                 <p className="text-primary font-medium tracking-wider animate-slide-in-left">
-                  WELCOME TO WRAPIFY SOLUTIONS
+                  WELCOME TO WRAPIFY SOLUTIONS - SERVING USA & QATAR
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  We Wrap Ideas into <br />
+                  Expert Web Development, App Development & <br />
                   <span className="gradient-text-animate">
-                    <AnimatedText text="Intelligent Digital Solutions" />
+                    <AnimatedText text="AI Automation Solutions" />
                   </span>
                 </h1>
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl animate-slide-in-left">
-                  Welcome to Wrapify Solutions, where creativity meets technology to deliver transformative digital
-                  experiences. We specialize in turning complex challenges into seamless, user-friendly, and scalable
-                  solutions that drive real business growth.
+                  Wrapify Solutions is your trusted partner for custom web development, mobile app development, AI
+                  agents, chatbot development, and digital transformation. We deliver innovative software solutions for
+                  businesses across USA and Qatar, helping you build scalable, high-performance applications that drive
+                  growth and empower your organization.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
@@ -54,7 +55,7 @@ export default function Home() {
                     asChild
                   >
                     <Link href="/services">
-                      Explore Services
+                      Explore Our Services
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -64,7 +65,7 @@ export default function Home() {
                     className="hover:scale-105 transition-transform bg-transparent"
                     asChild
                   >
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/contact">Get a Free Consultation</Link>
                   </Button>
                 </div>
               </Reveal>
@@ -105,9 +106,10 @@ export default function Home() {
         <div className="container px-4 mx-auto relative z-10">
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text-animate">Our Services</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text-animate">Our Core Services</h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg">
-                We offer comprehensive digital solutions to help businesses thrive in the modern digital landscape.
+                Comprehensive digital solutions tailored for businesses in USA and Qatar. From web applications to
+                AI-powered automation, we provide expert software development and IT services.
               </p>
             </div>
           </Reveal>
@@ -118,7 +120,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Code className="h-8 w-8 text-primary" />}
                   title="Web Development"
-                  description="Scalable, high-performance websites tailored to your brand and business needs with cutting-edge technologies."
+                  description="Custom responsive websites, progressive web apps, and e-commerce platforms. Our web development services deliver fast, secure, and SEO-optimized solutions for businesses in the USA and Qatar."
                 />
               </div>
             </Reveal>
@@ -127,7 +129,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Smartphone className="h-8 w-8 text-primary" />}
                   title="App Development"
-                  description="Intuitive mobile and desktop applications designed for maximum impact, usability, and user engagement."
+                  description="Native iOS and Android applications, cross-platform development, and desktop applications. Build powerful mobile apps that engage users and drive business growth."
                 />
               </div>
             </Reveal>
@@ -135,8 +137,8 @@ export default function Home() {
               <div className="card-hover-lift">
                 <ServiceCard
                   icon={<Bot className="h-8 w-8 text-primary" />}
-                  title="AI Agents"
-                  description="Smart, autonomous AI systems to streamline processes, enhance decision-making, and drive efficiency."
+                  title="AI Agents & Automation"
+                  description="Intelligent AI agents for process automation, data analysis, and autonomous decision-making. Streamline your operations with cutting-edge artificial intelligence solutions."
                 />
               </div>
             </Reveal>
@@ -145,7 +147,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<MessageSquare className="h-8 w-8 text-primary" />}
                   title="Chatbot Development"
-                  description="Intelligent conversational AI to enhance customer engagement, automate support, and boost satisfaction."
+                  description="AI-powered customer service chatbots, virtual assistants, and 24/7 automated support. Enhance customer engagement and reduce support costs with intelligent conversational AI."
                 />
               </div>
             </Reveal>
@@ -153,8 +155,8 @@ export default function Home() {
               <div className="card-hover-lift">
                 <ServiceCard
                   icon={<Palette className="h-8 w-8 text-primary" />}
-                  title="UI/UX Designing"
-                  description="Human-centered designs that blend functionality with stunning visuals to create memorable experiences."
+                  title="UI/UX Design"
+                  description="User-centered design, interface design, and prototyping. Create beautiful, intuitive digital experiences that users love and businesses trust."
                 />
               </div>
             </Reveal>
@@ -162,8 +164,8 @@ export default function Home() {
               <div className="card-hover-lift">
                 <ServiceCard
                   icon={<Zap className="h-8 w-8 text-primary" />}
-                  title="Performance Optimization"
-                  description="Lightning-fast solutions engineered to deliver exceptional user experiences and maximum engagement."
+                  title="AI Automation Services"
+                  description="Business process automation, workflow optimization, and intelligent automation solutions. Transform your business with AI-powered efficiency and innovation."
                 />
               </div>
             </Reveal>

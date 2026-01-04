@@ -11,37 +11,44 @@ type UseCase = {
 
 const useCases: UseCase[] = [
   {
-    title: "HAndyQ",
-    description: "https://media.licdn.com/dms/image/v2/D4D33AQG-eXpqTJuCnw/productpage-image_1128_635/B4DZm_ioHaJYAM-/0/1759855152092?e=1762246800&v=beta&t=mn2TN37I680MAWPnQlTbyPwbBf01GisAn9BCrbx2PKI",
-    category: "App Development",
-    image: "/mobile-productivity-app-screenshot.jpg",
-  },
-  {
-    title: "Sehat ke Baat",
+    title: "HandyQ - Productivity Mobile Application",
     description:
-      "A health-focused app enabling users to access wellness content and track daily health habits with ease.",
+      "A feature-rich productivity and task management mobile application for iOS and Android. HandyQ helps professionals organize their work, collaborate with teams, and boost productivity with intelligent automation features.",
     category: "App Development",
-    image: "https://media.licdn.com/dms/image/v2/D4D33AQF-Vf92XwaTDQ/productpage-image_1128_635/B4DZnPziu_GQAM-/0/1760128021414?e=1762246800&v=beta&t=ZBxrN2oLu3CdeAjGmyATRxrAe_pJ6ZrPTG4AyDB1Bqw",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D33AQG-eXpqTJuCnw/productpage-image_1128_635/B4DZm_ioHaJYAM-/0/1759855152092?e=1768154400&v=beta&t=TMeOiFfNHyTpQzPosCfIwScUIz9nhBnZImX21AXr0Ok",
   },
   {
-    title: "Quick Qari",
-    description: "An educational app for learning and recitation with audio guidance and progress tracking.",
-    category: "App Development",
-    image: "https://media.licdn.com/dms/image/v2/D4D33AQEE8oZpIQlZHA/productpage-image_1128_635/B4DZm_idTtKQAM-/0/1759855106411?e=1762246800&v=beta&t=wGNMy5vfhQfGcoIYfEnwPdUzBwRj9jZz4elONRDrvg0",
-  },
-  {
-    title: "Company Profile",
+    title: "Sehat ke Baat - Health & Wellness Mobile App",
     description:
-      "A modern, responsive corporate website showcasing brand identity, services, and a compelling company story.",
+      "A comprehensive health-focused mobile application enabling users to access wellness content, track health metrics, and maintain daily health habits. Built with user-centric design for better health outcomes.",
+    category: "App Development",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D33AQF-Vf92XwaTDQ/productpage-image_1128_635/B4DZnPziu_GQAM-/0/1760128021414?e=1768154400&v=beta&t=EVC_lWk8JmJth387lljI8k1GQSeoyihkm4vd_Lkqkq4",
+  },
+  {
+    title: "Quick Qari - Learning & Recitation App",
+    description:
+      "An innovative educational mobile app designed for learning and Islamic recitation. Features audio guidance, progress tracking, and interactive learning modules for users of all skill levels.",
+    category: "App Development",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D33AQEE8oZpIQlZHA/productpage-image_1128_635/B4DZm_idTtKQAM-/0/1759855106411?e=1768154400&v=beta&t=IKP_tn9AUKgqRhZrgUtY2oXjBdsEhDOLWDt1eQYBxLk",
+  },
+  {
+    title: "Modern Corporate Website",
+    description:
+      "A modern, responsive corporate website showcasing brand identity, company services, and compelling company story. Built with latest web technologies for optimal SEO performance and user engagement.",
     category: "Web Development",
-    image: "https://media.licdn.com/dms/image/v2/D4D33AQExEdjvFAurYA/productpage-image_1128_635/B4DZoqBC2_GsAM-/0/1761641509709?e=1762246800&v=beta&t=lisVOzdZbtD4U8RPadfN7MDniOLyVKkmZalIsl4MtxE",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D33AQHRG_v7UFy-5g/productpage-image_1128_635/B4DZocyE8WJUAM-/0/1761419482367?e=1768154400&v=beta&t=PK3NoASVaVT7ESCin2WYoTVwVtv3rjcojWv37QoB91U",
   },
   {
-    title: "Aussie Take Off Website",
+    title: "Aussie Take Off - Marketing Website",
     description:
-      "A sleek marketing site tailored for an Australian audience, optimized for performance and conversions.",
+      "A sleek, high-performance marketing website optimized for Australian audiences. Features conversion-focused design, fast loading times, and SEO optimization for maximum online visibility and customer acquisition.",
     category: "Web Development",
-    image: "https://media.licdn.com/dms/image/v2/D4D33AQG3m9HW5BlrlA/productpage-image_1128_635/B4DZnUpfONJMAQ-/0/1760209270904?e=1762246800&v=beta&t=KrXG4H4N_773Zpq-ItcMLov8Z2kyCRcWUcGtfFn7T8I",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D33AQG3m9HW5BlrlA/productpage-image_1128_635/B4DZnUpfONJMAQ-/0/1760209270904?e=1768154400&v=beta&t=NjuPzQz6F1IJOMIgR0NSm6v0fa8K-zPRceDg3HC3PQQ",
   },
 ]
 
@@ -78,10 +85,12 @@ export default function UseCasesPage() {
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <img
                       src={uc.image || "/placeholder.svg"}
-                      alt={`${uc.title} preview`}
+                      alt={`${uc.title} - ${uc.category} project showcase`}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 flex items-center gap-2 bg-background/80 backdrop-blur-sm border border-border px-3 py-1.5 rounded-full text-xs font-medium">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute top-4 left-4 flex items-center gap-2 bg-background/80 backdrop-blur-sm border border-border px-3 py-1.5 rounded-full text-xs font-medium shadow-md">
                       {uc.category === "App Development" ? (
                         <Smartphone className="h-4 w-4 text-primary" />
                       ) : (
