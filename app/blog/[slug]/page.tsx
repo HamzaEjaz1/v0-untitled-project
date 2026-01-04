@@ -90,7 +90,7 @@ Building apps for Qatar requires both technical expertise and cultural understan
     date: "2025-01-03",
     readTime: "10 min read",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBO7eDNkIUoymPIGtjkX28gl9EU35a0QdipQ&s,
+      "https://images.unsplash.com/photo-1512941691920-25bda36dc643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     keywords: ["app development Qatar", "mobile app development", "iOS development", "Android app"],
     location: "Qatar",
   },
