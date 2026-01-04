@@ -4,6 +4,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -81,11 +82,35 @@ export default function RootLayout({
           content="Empowering startups and enterprises with AI-driven digital solutions, SaaS platforms, and web automation."
         />
         <meta name="twitter:image" content="/og-image.jpg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Wrapify Solutions",
+              url: "https://wrapifysolutions.com",
+              logo: "https://media.licdn.com/dms/image/v2/D4D0BAQF2nk-epdLwrA/company-logo_100_100/B4DZmMgUDJGkAQ-/0/1758998915469/wrapifysolutions_logo",
+              sameAs: [
+                "https://www.youtube.com/@wrapifysolutions",
+                "https://www.tiktok.com/@wrapifysolutions",
+                "https://twitter.com/wrapifysolutions",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Customer Service",
+                email: "wrapifysolutions@gmail.com",
+              },
+              areaServed: ["US", "QA", "SA", "PK"],
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex flex-col min-h-screen">
             <Header />
+            <Breadcrumb />
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>

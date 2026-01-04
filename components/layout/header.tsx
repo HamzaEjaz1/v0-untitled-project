@@ -26,6 +26,18 @@ const navItems = [
   { name: "Use Cases", path: "/use-cases" },
   { name: "Blog", path: "/blog" },
   { name: "How We Empower", path: "/empower-business" },
+  {
+    name: "Locations",
+    path: "/locations",
+    submenu: [
+      { name: "USA", path: "/locations/usa" },
+      { name: "Saudi Arabia", path: "/locations/saudi-arabia" },
+      { name: "UAE", path: "/locations/united-arab-emirates" },
+      { name: "Qatar", path: "/locations/qatar" },
+      { name: "Egypt", path: "/locations/egypt" },
+      { name: "Pakistan", path: "/locations/pakistan" },
+    ],
+  },
   { name: "Contact", path: "/contact" },
 ]
 

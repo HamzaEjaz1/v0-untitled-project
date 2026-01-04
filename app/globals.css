@@ -77,6 +77,27 @@
   }
 }
 
+/* Consistent spacing and layout */
+section {
+  @apply py-20 px-4 md:px-6 lg:px-8;
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+.section-gap {
+  @apply gap-8 md:gap-10 lg:gap-12;
+}
+
+.section-padding {
+  @apply p-6 md:p-8 lg:p-12;
+}
+
+.section-margin {
+  @apply mb-8 md:mb-12 lg:mb-16;
+}
+
 /* Keep helpers */
 .text-gradient {
   background-clip: text;

@@ -28,7 +28,7 @@ export default function Home() {
             <div className="flex-1 space-y-6">
               <Reveal>
                 <p className="text-primary font-medium tracking-wider animate-slide-in-left">
-                  WELCOME TO WRAPIFY SOLUTIONS - SERVING USA & QATAR
+                  WELCOME TO WRAPIFY SOLUTIONS - SERVING USA & MENA REGION
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
@@ -41,10 +41,10 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl animate-slide-in-left">
-                  Wrapify Solutions is your trusted partner for custom web development, mobile app development, AI
-                  agents, chatbot development, and digital transformation. We deliver innovative software solutions for
-                  businesses across USA and Qatar, helping you build scalable, high-performance applications that drive
-                  growth and empower your organization.
+                  Wrapify Solutions brings global expertise with local understanding. Serving businesses across USA,
+                  Saudi Arabia, UAE, Qatar, Egypt, and Pakistan. We deliver world-class web development, mobile app
+                  development, AI agents, chatbot development, and digital transformation solutions tailored to your
+                  market needs.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
@@ -76,7 +76,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-[#375CA6]/20 to-[#3767A6]/20 z-10 group-hover:opacity-0 transition-opacity duration-500"></div>
                   <img
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                    alt="Digital Solutions"
+                    alt="Digital Solutions for USA and MENA Region"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20"></div>
@@ -108,8 +108,9 @@ export default function Home() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text-animate">Our Core Services</h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg">
-                Comprehensive digital solutions tailored for businesses in USA and Qatar. From web applications to
-                AI-powered automation, we provide expert software development and IT services.
+                Comprehensive digital solutions tailored for businesses across USA and MENA region including Saudi
+                Arabia, UAE, Qatar, Egypt, and Pakistan. From web applications to AI-powered automation, we provide
+                expert software development and IT services.
               </p>
             </div>
           </Reveal>
@@ -120,7 +121,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Code className="h-8 w-8 text-primary" />}
                   title="Web Development"
-                  description="Custom responsive websites, progressive web apps, and e-commerce platforms. Our web development services deliver fast, secure, and SEO-optimized solutions for businesses in the USA and Qatar."
+                  description="Custom responsive websites, progressive web apps, and e-commerce platforms. Our web development services deliver fast, secure, and SEO-optimized solutions for businesses in USA and MENA region."
                 />
               </div>
             </Reveal>
@@ -129,7 +130,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Smartphone className="h-8 w-8 text-primary" />}
                   title="App Development"
-                  description="Native iOS and Android applications, cross-platform development, and desktop applications. Build powerful mobile apps that engage users and drive business growth."
+                  description="Native iOS and Android applications, cross-platform development, and desktop applications. Build powerful mobile apps that engage users and drive business growth across all markets."
                 />
               </div>
             </Reveal>
@@ -138,7 +139,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Bot className="h-8 w-8 text-primary" />}
                   title="AI Agents & Automation"
-                  description="Intelligent AI agents for process automation, data analysis, and autonomous decision-making. Streamline your operations with cutting-edge artificial intelligence solutions."
+                  description="Intelligent AI agents for process automation, data analysis, and autonomous decision-making. Streamline your operations with cutting-edge artificial intelligence solutions tailored to your region."
                 />
               </div>
             </Reveal>
@@ -147,7 +148,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<MessageSquare className="h-8 w-8 text-primary" />}
                   title="Chatbot Development"
-                  description="AI-powered customer service chatbots, virtual assistants, and 24/7 automated support. Enhance customer engagement and reduce support costs with intelligent conversational AI."
+                  description="AI-powered customer service chatbots, virtual assistants, and 24/7 automated support in multiple languages. Enhance customer engagement and reduce support costs with intelligent conversational AI."
                 />
               </div>
             </Reveal>
@@ -156,7 +157,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Palette className="h-8 w-8 text-primary" />}
                   title="UI/UX Design"
-                  description="User-centered design, interface design, and prototyping. Create beautiful, intuitive digital experiences that users love and businesses trust."
+                  description="User-centered design, interface design, and prototyping. Create beautiful, intuitive digital experiences that users love and businesses trust across all markets."
                 />
               </div>
             </Reveal>
@@ -165,7 +166,7 @@ export default function Home() {
                 <ServiceCard
                   icon={<Zap className="h-8 w-8 text-primary" />}
                   title="AI Automation Services"
-                  description="Business process automation, workflow optimization, and intelligent automation solutions. Transform your business with AI-powered efficiency and innovation."
+                  description="Business process automation, workflow optimization, and intelligent automation solutions. Transform your business with AI-powered efficiency and innovation suitable for your regional needs."
                 />
               </div>
             </Reveal>
@@ -182,8 +183,8 @@ export default function Home() {
                 Why Choose Wrapify Solutions?
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg">
-                We combine innovation, expertise, and dedication to deliver exceptional results that exceed
-                expectations.
+                We combine innovation, expertise, and dedication to deliver exceptional results that exceed expectations
+                across USA and MENA markets.
               </p>
             </div>
           </Reveal>
@@ -194,9 +195,10 @@ export default function Home() {
                 <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 mb-6 group-hover:scale-110 transition-transform animate-bounce-subtle">
                   <TrendingUp className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Proven Track Record</h3>
+                <h3 className="text-xl font-bold mb-3">Global Expertise, Local Knowledge</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Years of experience delivering successful projects across diverse industries with measurable results.
+                  Years of experience serving businesses in USA, Saudi Arabia, UAE, Qatar, Egypt, and Pakistan with
+                  market-specific solutions.
                 </p>
               </div>
             </Reveal>
@@ -208,9 +210,10 @@ export default function Home() {
                 >
                   <Shield className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Security First</h3>
+                <h3 className="text-xl font-bold mb-3">Security & Compliance First</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Enterprise-grade security and compliance standards to protect your data and maintain user trust.
+                  Enterprise-grade security, compliance with regional standards, and data protection to safeguard your
+                  business.
                 </p>
               </div>
             </Reveal>
@@ -222,10 +225,9 @@ export default function Home() {
                 >
                   <Zap className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Fast Delivery</h3>
+                <h3 className="text-xl font-bold mb-3">24/7 Support Across Timezones</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Agile methodology ensures quick turnaround times without compromising on quality or attention to
-                  detail.
+                  Round-the-clock technical support covering USA, Middle East, North Africa, and South Asian timezones.
                 </p>
               </div>
             </Reveal>
@@ -264,7 +266,8 @@ export default function Home() {
             <Reveal delay={0.1}>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
                 Partner with Wrapify Solutions to create digital experiences that wrap innovation, design, and
-                intelligence into one transformative solution. Let's build something extraordinary together.
+                intelligence into one transformative solution. Let's build something extraordinary together across USA
+                and MENA region.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
